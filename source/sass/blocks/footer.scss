@@ -1,0 +1,23 @@
+.footer {
+  background-color: $color-default-black;
+}
+
+.footer .container {
+  padding: 50px;
+  display: flex;
+justify-content: space-between;
+}
+
+.footer a,
+address{
+  color: $color-default-white;
+}
+
+// .footer__links {
+//   display: flex;
+// flex-direction: column;
+// }
+
+.footer h3 {
+  color: $color-default-white;
+}

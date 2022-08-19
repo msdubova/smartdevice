@@ -1,7 +1,13 @@
-
+.nav {
+  flex-grow: 1;
+}
 .nav ul {
+
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+
 
   @include reset-ul();
 
@@ -21,15 +27,15 @@
   //     background-image: url("../img/svg/logo-antarctica--nav.svg");
   //   }
   // }
+  padding: 0 150px 0 160px;
 }
 
 .nav__link {
   position: relative;
 
-
-  padding: 25px;
+  display: block;
+  padding: 15px;
   padding-left: 35px;
-
   font-size: 16px;
   line-height: 18px;
   color: $color-primary-white;
@@ -37,11 +43,12 @@
   &::before {
     content: "";
     position: absolute;
-
-    width: 20px;
-    height: 20px;
-    left: 0;
-
+    left: -10px;
+top: 3px;
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    background-position: center;
   }
 
 
@@ -50,6 +57,7 @@
   &--tel {
     &::before {
       background-image: url("../../img/svg/icon-phone.svg");
+
     }
   }
   &--mail {

@@ -1,0 +1,66 @@
+.advantages {
+  background-color: white;
+  // border: 10px firebrick solid;
+}
+.advantages .container {
+  padding: 30px;
+}
+.advantages ul {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1222px;
+
+  @include reset-ul;
+}
+
+.advantages li {
+  box-sizing: border-box;
+  width: 48.7%;
+  min-height: 300px;
+  margin-right: 2.6%;
+  margin-bottom: 30px;
+  padding: 40px 45px 35px 40px;
+box-sizing: border-box;
+  border: 1px solid rgba(235, 235, 235, 1);
+  border-left: 5px solid $color-primary-blue;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  &:hover {
+
+    background-color: $color-primary-blue;
+    border: none;
+
+    & * {
+      color: rgba(242, 245, 246, 1);
+
+    }
+    & svg {
+      fill: $color-default-white;
+    }
+  }
+}
+
+
+.advantages svg {
+ fill: $color-primary-blue;
+
+}
+.advantages dd {
+
+
+  align-items: center;
+  margin: 0;
+  margin-bottom: 13px;
+
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  font-family: "Roboto Condensed";
+  color: $color-primary-white;
+  color: $color-primary-blue;
+
+
+}

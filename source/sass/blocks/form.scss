@@ -1,0 +1,140 @@
+.form {
+
+  background: $color-primary-blue;
+  position: relative;
+overflow: hidden;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 1266px;
+    height: 950px;
+    background: rgba(4, 24, 39, 0.5);
+    transform: rotate(-50deg);
+    left: -542px;
+top: -300px;
+
+  }
+}
+
+.form .container {
+
+  display: flex;
+  justify-content: space-between;
+  padding: 110px 0;
+}
+
+.form img {
+  z-index: 10;
+  position: absolute;
+}
+.form .form__block {
+  z-index: 1;
+  width: 50%;
+  padding: 25px 25px;
+}
+.form h2 {
+  margin-bottom: 12px;
+}
+.form fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+
+  border: none;
+}
+
+.form legend {
+  width: 100%;
+  margin: 0;
+  padding: none;
+}
+
+.form p {
+  width: 48%;
+}
+
+.form input {
+  padding: 11px;
+  width: 100%;
+
+  background: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #ffffff;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "PT Mono";
+    color: #ffffff;
+  }
+}
+
+.form textarea {
+  width: 100%;
+
+  background: rgba(4, 20, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  color: #ffffff;
+  min-height: 155px;
+  padding: 11px;
+
+  &:focus-visible,
+  &:hover {
+    outline: auto;
+    outline-offset: 5px;
+  }
+
+
+
+}
+
+.form .button {
+  display: inline-block;
+  width: 48%;
+height: auto;
+
+}
+
+.form label {
+
+
+font-family: 'PT Mono';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+
+color: #FFFFFF;
+
+opacity: 0.8;
+padding-left: 20px;
+display: block;
+position: relative;
+
+&::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 2px #FFFFFF solid;
+  border-radius: 2px;
+  left: 0;
+  top: 6px;
+
+}
+}
+
+.form input[type=checkbox]:checked + label {
+&::before {
+  background-image: url("../../img/svg/icon-vector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(90deg);
+}
+}

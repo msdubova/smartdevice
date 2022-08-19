@@ -1,0 +1,74 @@
+.catalog {
+  background-color: $color-default-black;
+
+  & * {
+    color: white;
+  }
+}
+
+.catalog .container {
+  padding: 35px 30px 140px 30px;
+}
+
+.catalog h2 {
+  margin-bottom: 54px;
+
+  color: white;
+  font-family: 'Roboto Condensed';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 51px;
+
+
+}
+
+.catalog ul {
+  display: flex;
+
+  @include reset-ul;
+}
+
+.catalog li {
+  position: relative;
+
+  width: 350px ;
+  height: 650px;
+  margin-right: 85px;
+
+  background: url("../../img/bg-card-production-desktop-1x.png");
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: $color-primary-blue;
+    background-image: url("../../img/svg/icon-vector.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.catalog a {
+  display: block;
+  height: 100%;
+  padding: 48px 140px 48px 40px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Roboto Condensed";
+  color: #ffffff;
+  &:hover {
+    outline: 3px solid #fff;
+    outline-offset: 5px;
+  }
+}

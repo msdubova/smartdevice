@@ -16,6 +16,7 @@
 </head>
 
 <body class="page__body">
+
   <header class="header section">
     <h1 class="visually-hidden"> Интернет-магазин печатных плат Smart-Device </h1>
     <div class="header__sticker">
@@ -62,54 +63,66 @@
 
   </header>
   <main>
-    <section class="advantages section">
+    <section class="advantages">
       <div class="container">
-      <ul>
-        <li>
-          <dl>
-            <dd>
-              Оперативные сроки
-            </dd>
-            <dt>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять
-              заказы плат и комплектующих в самые короткие сроки
-            </dt>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dd>
-              Крупные поставщики
-            </dd>
-            <dt>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
-              Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
+        <ul>
+          <li>
+            <svg width="35" height="35" role="img" aria-label="Изображение часов">
+              <use xlink:href="img/sprite_auto.svg#icon-advantages-clock"></use>
+            </svg>
+            <dl>
+              <dd>
+                Оперативные сроки
+              </dd>
+              <dt>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
+                доставлять
+                заказы плат и комплектующих в самые короткие сроки
+              </dt>
+            </dl>
+          </li>
+          <li>
+            <svg width="35" height="35" role="img" aria-label="Изображентие часов">
+              <use xlink:href="img/sprite_auto.svg#icon-advantages-suppliers"></use>
+            </svg>
+            <dl>
+              <dd>
+                Крупные поставщики
+              </dd>
+              <dt>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.
+                Сотрудничество с такими компаниями обеспечивает хорошее качество нашей продукции.
 
-            </dt>
-          </dl>
-        </li>
-        <li>
+              </dt>
+            </dl>
+          </li>
+          <li>
+            <svg width="35" height="35" role="img" aria-label="Изображентие часов">
+              <use xlink:href="img/sprite_auto.svg#icon-advantages-confident"></use>
+            </svg>
+            <dl>
 
-          <dl>
+              <dd>
+                Полная конфиденциальность
+              </dd>
+              <dt>По желанию клиента  мы обеспечиваем полную конфиденциальность.
 
-            <dd>
-              Полная конфиденциальность
-            </dd>
-            <dt>По желанию клиента мы обеспечиваем полную конфиденциальность.
+              </dt>
+            </dl>
+          </li>
+          <li>
+            <svg width="35" height="35" role="img" aria-label="Изображентие часов">
+              <use xlink:href="img/sprite_auto.svg#icon-advantages-personalisation"></use>
+            </svg>
+            <dl>
+              <dd>
+                Персонализация стоимости
+              </dd>
+              <dt>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
+                устраивает.
+              </dt>
+            </dl>
+          </li>
 
-            </dt>
-          </dl>
-        </li>
-        <li>
-          <dl>
-            <dd>
-              Персонализация стоимости
-            </dd>
-            <dt>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
-              устраивает.
-            </dt>
-          </dl>
-        </li>
-
-      </ul>
+        </ul>
       </div>
     </section>
     <section class="aboutus section">
@@ -131,71 +144,75 @@
           Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании.
           Использование инновационных технологий помогает экономить деньги и время наших клиентов
         </p>
-        <button class="aboutus__button button"></button>
+        <button class="aboutus__button button">Подробнее</button>
       </div>
     </section>
-    <section class="catalog section">
+    <section class="catalog">
       <div class="container">
-      <h2>
-        Smart Device предлагает следующие товары и услуги
-      </h2>
-      <ul>
-        <li>
-          <a>
-            Производство печатных
-            плат
-          </a>
-        </li>
-        <li>
-          <a>
-            Монтаж печатных плат
-          </a>
-        </li>
-        <li>
-          <a>
-            Комплектующие
-            для
-            светотехники
-          </a>
-        </li>
+        <h2>
+          Smart Device предлагает следующие товары и услуги
+        </h2>
+        <ul>
+          <li>
+            <a href="#">
+              Производство печатных
+              плат
+            </a>
+          </li>
+          <li>
+            <a>
+              Монтаж печатных плат
+            </a>
+          </li>
+          <li>
+            <a>
+              Комплектующие
+              для
+              светотехники
+            </a>
+          </li>
 
-      </ul>
-</div>
+        </ul>
+      </div>
     </section>
-<section class="application section">
-  <div class="container">
-  <h2>
-    Остались вопросы? Задайте их нам!
-  </h2>
-  <form action="" method="get">
-    <fieldset>
-      <legend>
-        Мы проконсультируем Вас бесплатно
-      </legend>
-      <p>
-        <input id="name" name="user-name" type="text" required placeholder="Имя">
-        <label for="name" class="visually-hidden">Укажите Ваше имя</label>
-      </p>
-      <p>
-        <input id="tel" name="user-tel" type="tel" required placeholder="Телефон" pattern="([+]|[0-9])+[0-9]">
-        <label for="tel" class="visually-hidden">Укажите номер телефона в формате</label>
-      </p>
-      <textarea placeholder="Ваш вопрос">
-
+    <section class="form">
+      <div class="container">
+        <picture>
+          <img src="img/img-form-plane-desktop-1x.png" alt="Изображение самолета">
+        </picture>
+        <div class="form__block">
+        <h2>
+          Остались вопросы? Задайте их нам!
+        </h2>
+        <form action="" method="get">
+          <fieldset>
+            <legend>
+              Мы проконсультируем Вас бесплатно
+            </legend>
+            <p>
+              <input id="name" name="user-name" type="text" required placeholder="Имя">
+              <label for="name" class="visually-hidden">Укажите Ваше имя</label>
+            </p>
+            <p>
+              <input id="tel" name="user-tel" type="tel" required placeholder="Телефон" pattern="([+]|[0-9])+[0-9]">
+              <label for="tel" class="visually-hidden">Укажите номер телефона в формате</label>
+            </p>
+            <textarea>
+Ваш вопрос
       </textarea>
-      <button class="application__button button">
-        Задать вопрос
-      </button>
-      <p>
-        <input type="checkbox" id="agreement" name="check-agreement" required checked>
-        <label for="agreement">
-          Я&nbsp;согласен на&nbsp;обработку персональных данных
-        </label>
-      </p>
-    </fieldset>
-  </form>
-  </div>
-</section>
+            <button class="application__button button">
+              Задать вопрос
+            </button>
+            <p>
+              <input type="checkbox" id="agreement" name="check-agreement" required checked class="visually-hidden">
+              <label for="agreement">
+                Я&nbsp;согласен на&nbsp;обработку персональных данных
+              </label>
+            </p>
+          </fieldset>
+        </form></div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="container">
@@ -216,7 +233,7 @@
           <li>
             <a href="#" class="socials__link">
               <svg width="30" height="30" role="img" aria-label="Логотип Одноклассники">
-                <use xlink:href="img/sprite_auto.svg#logo-odno"></use>
+                <use xlink:href="img/sprite_auto.svg#logo-odnoklassniky"></use>
               </svg>
             </a>
           </li>
@@ -227,53 +244,64 @@
               </svg>
             </a>
           </li>
-          </ul>
+        </ul>
       </div>
       <div class="footer__nav">
         <h3>Разделы сайта</h3>
         <ul>
           <li>
+            <a href="#">
             О Компаниии
+            </a>
           </li>
           <li>
+            <a href="#">
             Продукты
+          </a>
           </li>
           <li>
+            <a href="#">
             Производство печатных плат
+          </a>
           </li>
           <li>
+            <a href="#">
             Монтаж печатных плат
+          </a>
           </li>
           <li>
+            <a href="#">
             Комплектующие
+          </a>
           </li>
           <li>
+            <a href="#">
             Доставка
+          </a>
           </li>
           <li>
+            <a href="#">
             Контакты
+          </a>
           </li>
         </ul>
       </div>
       <div class="footer__contacts">
-        <h2>
+        <h3>
           Наш офис
-        </h2>
+        </h3>
         <address>
           г. Мытищи, Олимпийский проспект, д.10
         </address>
-        <a href="tel:+7 (495) 589-40-50"
-          aria-label="Номер телефона офиса продаж">
+        <a href="tel:+7 (495) 589-40-50" aria-label="Номер телефона офиса продаж">
           +7 (495) 589-40-50
         </a>
-        <a href="tel:+7 (925) 389-58-29"
-        aria-label="Номер телефона офиса продаж">
-        +7 (925) 389-58-29
-      </a>
-      <a href="tel:+7 (925) 364-78-13"
-      aria-label="Номер телефона офиса продаж">
-      +7 (925) 364-78-13
-    </a>
+        <a href="tel:+7 (925) 389-58-29" aria-label="Номер телефона офиса продаж">
+          +7 (925) 389-58-29
+        </a>
+        <a href="tel:+7 (925) 364-78-13" aria-label="Номер телефона офиса продаж">
+          +7 (925) 364-78-13
+        </a>
       </div>
     </div>
   </footer>
