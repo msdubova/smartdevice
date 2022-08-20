@@ -8,6 +8,10 @@
 
 .catalog .container {
   padding: 35px 30px 140px 30px;
+
+  @include vp-1023 {
+    padding: 50px;
+  }
 }
 
 .catalog h2 {
@@ -21,10 +25,28 @@
   color: white;
 }
 
+.catalog h3 {
+  padding: 0;
+  margin: 0;
+
+font-family: 'Roboto Condensed';
+
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+
+@include vp-1023 {
+  width: 35%;
+}
+}
 .catalog ul {
   display: flex;
 
   @include reset-ul;
+
+  @include vp-1023 {
+   flex-direction: column;
+  }
 }
 
 .catalog li {
@@ -38,6 +60,13 @@
   &:nth-child(3n) {
     margin-right: 0;
   }
+
+  @include vp-1023 {
+    width: 100%;
+    height: 250px;
+    margin-right: 0;
+    margin-bottom: 30px;
+   }
 }
 
 .catalog__item {
@@ -48,17 +77,36 @@
     @include retina () {
       background-image: url("../../img/bg-card-production-desktop-2x.webp");
     }
+
+    @include vp-1023 {
+      background-image: url("../../img/bg-card-production-tablet-1x.webp");
+    @include retina () {
+      background-image: url("../../img/bg-card-production-tablet-2x.webp");
+    }
+    }
   }
   &--installation {
     background-image: url("../../img/bg-card-installation-desktop-1x.webp");
     @include retina () {
       background-image: url("../../img/bg-card-installation-desktop-2x.webp");
     }
+    @include vp-1023 {
+      background-image: url("../../img/bg-card-installation-tablet-1x.webp");
+    @include retina () {
+      background-image: url("../../img/bg-card-installation-tablet-2x.webp");
+    }
+    }
   }
   &--details {
     background-image: url("../../img/bg-card-details-desktop-1x.webp");
     @include retina () {
       background-image: url("../../img/bg-card-details-desktop-2x.webp");
+    }
+    @include vp-1023 {
+      background-image: url("../../img/bg-card-details-tablet-1x.webp");
+    @include retina () {
+      background-image: url("../../img/bg-card-details-tablet-2x.webp");
+    }
     }
   }
 }

@@ -19,6 +19,21 @@
     }
     background-repeat: no-repeat;
     background-size: cover;
+    @include vp-1023 {
+      background-image: url("../../img/bg-aboutus-tablet-1x.webp");
+      @include retina () {
+        background-image: url("../../img/bg-aboutus-tablet-2x.webp");
+      }
+
+    }
+    @include vp-767 {
+      display: none;
+
+    }
+  }
+
+  @include vp-767 {
+    padding: 25px;
   }
 }
 
