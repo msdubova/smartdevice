@@ -10,7 +10,7 @@
   padding: 35px 30px 140px 30px;
 
   @include vp-1023 {
-    padding: 50px;
+    padding: 25px 50px 45px 50px;
   }
 }
 
@@ -23,6 +23,10 @@
   line-height: 51px;
   font-family: "Roboto Condensed";
   color: white;
+
+  @include vp-1023 {
+    margin-bottom: 39px;
+  }
 }
 
 .catalog h3 {
@@ -140,5 +144,8 @@ line-height: 30px;
     background-image: url("../../img/svg/icon-vector.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+  @include vp-1023 {
+    padding: 37px 45px;
   }
 }

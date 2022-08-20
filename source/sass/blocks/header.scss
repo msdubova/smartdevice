@@ -1,18 +1,21 @@
 .header {
   min-height: 885px;
 
-// border: 10px sienna solid;
   color: $color-primary-white;
 
   background-color: $color-default-black;
   background-image: url("../../img/bg-intro-desktop-1x.webp");
+  background-size: cover;
+
   @include retina () {
     background-image: url("../../img/bg-intro-desktop-2x.webp");
   }
-  background-size: cover;
+
   @include vp-1023 {
     min-height: 640px;
+
     background-image: url("../../img/bg-intro-tablet-1x.webp");
+
     @include retina () {
       background-image: url("../../img/bg-intro-tablet-2x.webp");
     }
@@ -24,13 +27,13 @@
 }
 
 .header__sticker {
-
-  background: $black-to-right;
-  position: sticky;
+  position:         sticky;
   position: -webkit-sticky;
   position: relative;
   top: 0;
-z-index: 1;
+  z-index: 1;
+
+  background: $black-to-right;
 }
 
 .header__sticker .container {
@@ -39,40 +42,43 @@ z-index: 1;
   align-items: flex-start;
   padding-top: 30px;
   padding-bottom: 30px;
+
   @include vp-1023 {
-    padding: 20px 50px 25px;
+    padding: 20px 60px 25px 50px;
   }
 
-  @include vp-767{
+  @include vp-767 {
     padding: 15px 26px 20px;
   }
 }
+
 .header__logo {
   width: 215px;
   height: 55px;
+
   background-image: url("../../img/svg/logo-full.svg");
 
-
-  @include vp-767{
+  @include vp-767 {
     width: 35px;
     height: 35px;
+
     background-image: url("../../img/svg/logo-mobile.svg");
   }
-
 }
+
 .header__sticker .button {
   margin: 5px 0;
+
   @include vp-1023 {
-    display: none;  }
+    display: none;
+  }
 }
 
-
-
 .header__intro .container {
-  padding: 158px  50px 50px 155px;
+  padding: 165px  50px 50px 155px;
 
   @include vp-1023 {
-    padding: 100px 50px 25px;
+    padding: 48px 50px 25px;
   }
 
   @include vp-767 {
@@ -82,6 +88,7 @@ z-index: 1;
 
 .header__intro h2 {
   margin: 30px 0 32px 0;
+
   font-style: normal;
   font-weight: 700;
   font-size: 80px;
@@ -91,50 +98,46 @@ z-index: 1;
   text-transform: uppercase;
   letter-spacing: 0.07em;
 
-
   @include vp-1023 {
+    margin-bottom: 2px ;
 
-font-size: 64px;
-line-height: 75px;
-
-
-
-color: #F2F5F7;
+    font-size: 64px;
+    line-height: 75px;
+    color: #f2f5f7;
   }
 
   @include vp-767 {
-
     font-size: 36px;
     line-height: 42px;
-
-
-
   }
 }
 
 .header__intro p {
   width: 685px;
+  margin-bottom: 36px;
 
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 34px;
   font-family: "PT Mono";
-  margin-bottom: 36px;
 
-  @include vp-767{
-width: auto;
-font-size: 14px;
-line-height: 22px;
-
-
-
+  @include vp-1023 {
+    margin-top: 0;
+    margin-bottom: 47px;
   }
 
+  @include vp-767 {
+    width: auto;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .header__intro .button {
   padding: 17px 27px;
+
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -144,7 +147,11 @@ line-height: 22px;
   color: $color-primary-white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+
   background-color: $color-primary-blue;
   border: none;
 
+  @include vp-1023 {
+    margin-left: 45px;
+  }
 }

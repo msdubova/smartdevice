@@ -762,14 +762,14 @@ button,
 }
 
 .header__sticker {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
-  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
-  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   position: sticky;
   position: -webkit-sticky;
   position: relative;
   top: 0;
   z-index: 1;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
+  background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 }
 
 .header__sticker .container {
@@ -797,7 +797,7 @@ button,
 }
 
 .header__intro .container {
-  padding: 158px  50px 50px 155px;
+  padding: 165px  50px 50px 155px;
 }
 
 .header__intro h2 {
@@ -814,12 +814,12 @@ button,
 
 .header__intro p {
   width: 685px;
+  margin-bottom: 36px;
   font-style: normal;
   font-weight: 400;
   font-size: 22px;
   line-height: 34px;
   font-family: "PT Mono";
-  margin-bottom: 36px;
 }
 
 .header__intro .button {
@@ -947,6 +947,13 @@ button,
   font-family: "Roboto Condensed";
   color: #F2F5F6;
   color: #00B2FF;
+}
+
+.advantages dt {
+  font-family: 'PT Mono';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21.9px;
 }
 
 .aboutus .container {
@@ -1377,10 +1384,10 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 70%;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
+  width: 70%;
 }
 
 .footer__block {
@@ -1484,7 +1491,7 @@ address {
   }
 
   .header__sticker .container {
-    padding: 20px 50px 25px;
+    padding: 20px 60px 25px 50px;
   }
 
   .header__sticker .button {
@@ -1492,13 +1499,23 @@ address {
   }
 
   .header__intro .container {
-    padding: 100px 50px 25px;
+    padding: 48px 50px 25px;
   }
 
   .header__intro h2 {
+    margin-bottom: 2px;
     font-size: 64px;
     line-height: 75px;
-    color: #F2F5F7;
+    color: #f2f5f7;
+  }
+
+  .header__intro p {
+    margin-top: 0;
+    margin-bottom: 47px;
+  }
+
+  .header__intro .button {
+    margin-left: 45px;
   }
 
   .nav ul {
@@ -1510,6 +1527,7 @@ address {
   .nav li {
     width: 40px;
     margin-left: 20px;
+    padding-top: 0;
   }
 
   .nav span {
@@ -1526,12 +1544,49 @@ address {
     clip-path: inset(100%);
   }
 
+  .advantages .container {
+    padding: 15px 50px;
+  }
+
+  .advantages li {
+    width: 47.76%;
+    margin-right: 30px;
+    padding: 40px 45px 13px 40px;
+    min-height: 360px;
+  }
+
+  .advantages dl {
+    margin-top: 11px;
+  }
+
+  .advantages dd {
+    margin-bottom: 6px;
+  }
+
   .aboutus .container::before {
+    top: 5px;
+    left: 45px;
     background-image: url("../../img/bg-aboutus-tablet-1x.webp");
   }
 
+  .aboutus .container {
+    padding: 0 50px 10px 224px;
+  }
+
+  .aboutus p {
+    line-height: 21.9px;
+  }
+
+  .aboutus .button {
+    margin-top: -5px;
+  }
+
   .catalog .container {
-    padding: 50px;
+    padding: 25px 50px 45px 50px;
+  }
+
+  .catalog h2 {
+    margin-bottom: 39px;
   }
 
   .catalog h3 {
@@ -1564,6 +1619,10 @@ address {
     background-image: url("../../img/bg-card-details-tablet-1x.webp");
   }
 
+  .catalog a {
+    padding: 37px 45px;
+  }
+
   .form::before {
     display: none;
   }
@@ -1573,7 +1632,7 @@ address {
   }
 
   .form .container {
-    padding: 50px;
+    padding: 45px 50px;
   }
 
   .form__img {
@@ -1588,6 +1647,15 @@ address {
 
   .form h2 {
     margin-top: 0;
+    margin-bottom: 7px;
+  }
+
+  .form fieldset {
+    padding-left: 0;
+  }
+
+  .form legend {
+    margin-bottom: 9px;
   }
 
   .footer .container {
@@ -1595,32 +1663,48 @@ address {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 50px;
+    padding-right: 45px;
+    padding-bottom: 40px;
   }
 
   .footer__links {
-    margin-right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    margin-right: 0;
   }
 
   .footer__nav {
     width: 100%;
   }
 
+  .footer__block {
+    padding: 7px 0;
+  }
+
   .footer__block--nav {
-    width: 50%;
+    width: 54%;
   }
 
   .footer__block--nav ul {
     height: auto;
   }
 
+  .footer__block li {
+    width: 70%;
+  }
+
   .footer__socials {
-    padding-top: 10px;
+    padding-top: 5px;
+  }
+
+  .socials li {
+    margin-left: 15px;
+    margin-right: 0px;
   }
 }
 
@@ -1752,18 +1836,18 @@ address {
 
   .footer a,
   address {
-    font-family: 'PT Mono';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
+    font-family: "PT Mono";
     /* or 19px */
     color: rgba(255, 255, 255, 0.7);
   }
 
   .footer h3 {
-    padding: 20px 0;
     margin-bottom: 0;
+    padding: 20px 0;
   }
 
   .footer__nav {
@@ -1774,17 +1858,17 @@ address {
   }
 
   .footer__block {
-    width: 100%;
     position: relative;
+    width: 100%;
   }
 
   .footer__block::before {
-    position: absolute;
     content: "";
+    position: absolute;
+    left: -30px;
     width: 2000vh;
     height: 1px;
     background-color: white;
-    left: -30px;
   }
 
   .footer__title {
@@ -1799,18 +1883,18 @@ address {
   .footer__toggle {
     display: block;
     width: 15px;
-    background: none;
     height: 15px;
-    background-image: url("../../img/svg/icon-plus.svg");
-    border: none;
-    padding: 15px;
-    background-position: center;
     margin-top: 10px;
+    padding: 15px;
+    background: none;
+    background-image: url("../../img/svg/icon-plus.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    border: none;
   }
 
   .footer__toggle:hover {
-    outline: 3px solid #fff;
+    outline: 3px solid #ffffff;
     outline-offset: 5px;
   }
 
