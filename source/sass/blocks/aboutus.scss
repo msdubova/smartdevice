@@ -13,8 +13,12 @@
     width: 150px;
     height: 320px;
 
-    background: url("../../img/bg-aboutus-desktop-1x.png");
+    background-image: url("../../img/bg-aboutus-desktop-1x.webp");
+    @include retina () {
+      background-image: url("../../img/bg-aboutus-desktop-2x.webp");
+    }
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -39,4 +43,9 @@
   color: $color-primary-blue;
 
   border-color: $color-primary-blue;
+
+  &:hover,
+  &:focus {
+    outline-color: $color-primary-blue;
+  }
 }

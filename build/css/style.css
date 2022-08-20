@@ -757,7 +757,7 @@ button,
   min-height: 885px;
   color: #F2F5F6;
   background-color: #041827;
-  background-image: url("../../img/bg-intro-desktop-1x.png");
+  background-image: url("../../img/bg-intro-desktop-1x.webp");
   background-size: cover;
 }
 
@@ -963,8 +963,9 @@ button,
   left: 30px;
   width: 150px;
   height: 320px;
-  background: url("../../img/bg-aboutus-desktop-1x.png");
+  background-image: url("../../img/bg-aboutus-desktop-1x.webp");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .aboutus h2 {
@@ -998,6 +999,11 @@ button,
   border-color: #00B2FF;
 }
 
+.aboutus .button:hover,
+.aboutus .button:focus {
+  outline-color: #00B2FF;
+}
+
 .catalog {
   background-color: #041827;
 }
@@ -1012,12 +1018,12 @@ button,
 
 .catalog h2 {
   margin-bottom: 54px;
-  color: white;
-  font-family: 'Roboto Condensed';
   font-style: normal;
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
+  font-family: "Roboto Condensed";
+  color: white;
 }
 
 .catalog ul {
@@ -1034,14 +1040,49 @@ button,
   width: 350px;
   height: 650px;
   margin-right: 85px;
-  background: url("../../img/bg-card-production-desktop-1x.png");
+  background-color: cadetblue;
 }
 
 .catalog li:nth-child(3n) {
   margin-right: 0;
 }
 
-.catalog li::before {
+.catalog__item {
+  background-size: cover;
+  background-color: black;
+}
+
+.catalog__item--production {
+  background-image: url("../../img/bg-card-production-desktop-1x.webp");
+}
+
+.catalog__item--installation {
+  background-image: url("../../img/bg-card-installation-desktop-1x.webp");
+}
+
+.catalog__item--details {
+  background-image: url("../../img/bg-card-details-desktop-1x.webp");
+}
+
+.catalog a {
+  position: relative;
+  display: block;
+  height: 100%;
+  padding: 48px 140px 48px 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Roboto Condensed";
+  color: #ffffff;
+}
+
+.catalog a:hover,
+.catalog a:focus-within {
+  outline: 3px solid #ffffff;
+  outline-offset: 5px;
+}
+
+.catalog a::before {
   content: "";
   position: absolute;
   right: 0;
@@ -1054,64 +1095,64 @@ button,
   background-position: center;
 }
 
-.catalog a {
-  display: block;
-  height: 100%;
-  padding: 48px 140px 48px 40px;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  font-family: "Roboto Condensed";
-  color: #ffffff;
-}
-
-.catalog a:hover {
-  outline: 3px solid #fff;
-  outline-offset: 5px;
-}
-
 .form {
-  background: #00B2FF;
+  min-height: 840px;
   position: relative;
   overflow: hidden;
+  background: #00B2FF;
 }
 
 .form::before {
-  position: absolute;
   content: "";
-  width: 1266px;
-  height: 950px;
+  position: absolute;
+  top: -1000px;
+  left: -295px;
+  width: 1000px;
+  height: 2000px;
   background: rgba(4, 24, 39, 0.5);
-  -webkit-transform: rotate(-50deg);
-  -ms-transform: rotate(-50deg);
-  transform: rotate(-50deg);
-  left: -542px;
-  top: -300px;
+  -webkit-transform: rotate(49.2deg);
+  -ms-transform: rotate(49.2deg);
+  transform: rotate(49.2deg);
 }
 
 .form .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   padding: 110px 0;
 }
 
+.form__img {
+  position: relative;
+  width: 46%;
+}
+
 .form img {
-  z-index: 10;
   position: absolute;
+  z-index: 10;
+  top: 26%;
+  left: 5%;
 }
 
 .form .form__block {
   z-index: 1;
   width: 50%;
   padding: 25px 25px;
+  margin-left: 40px;
 }
 
 .form h2 {
   margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  font-family: Roboto Condensed;
+  text-align: left;
+  color: #E5E5E5;
+  letter-spacing: 0;
 }
 
 .form fieldset {
@@ -1124,6 +1165,7 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0;
+  padding-left: 6px;
   border: none;
 }
 
@@ -1131,21 +1173,29 @@ button,
   width: 100%;
   margin: 0;
   padding: none;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "PT Mono";
+  color: #E5E5E5;
 }
 
 .form p {
-  width: 48%;
+  width: 47.3%;
+  margin-bottom: 23px;
 }
 
 .form input {
-  padding: 11px;
   width: 100%;
+  padding: 15px;
+  color: #ffffff;
   background: rgba(4, 20, 39, 0.15);
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #ffffff;
 }
 
 .form input::-webkit-input-placeholder {
@@ -1190,14 +1240,15 @@ button,
 
 .form textarea {
   width: 100%;
+  min-height: 155px;
+  padding: 25px 11px;
+  color: #ffffff;
   background: rgba(4, 20, 39, 0.15);
   border: none;
   border-radius: 3px;
   -webkit-box-shadow: none;
   box-shadow: none;
-  color: #ffffff;
-  min-height: 155px;
-  padding: 11px;
+  margin-bottom: 20px;
 }
 
 .form textarea:focus-visible,
@@ -1208,32 +1259,45 @@ button,
 
 .form .button {
   display: inline-block;
-  width: 48%;
+  width: 45.5%;
   height: auto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Roboto Condensed";
+  text-align: center;
+  letter-spacing: 0.05em;
+  background-color: #041827;
+  border: none;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  padding-top: 15px;
+  margin-top: 0;
 }
 
 .form label {
-  font-family: 'PT Mono';
+  position: relative;
+  display: block;
+  padding-left: 20px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  color: #FFFFFF;
+  font-family: "PT Mono";
+  color: #ffffff;
   opacity: 0.8;
-  padding-left: 20px;
-  display: block;
-  position: relative;
 }
 
 .form label::before {
   content: "";
   position: absolute;
+  top: 6px;
+  left: -6px;
   width: 15px;
   height: 15px;
-  border: 2px #FFFFFF solid;
+  border: 2px #ffffff solid;
   border-radius: 2px;
-  left: 0;
-  top: 6px;
 }
 
 .form input[type=checkbox]:checked + label::before {
@@ -1245,18 +1309,40 @@ button,
   transform: rotate(90deg);
 }
 
+.form__agreement {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  padding-top: 12px;
+  padding-left: 13px;
+}
+
+.form__agreement:focus-within {
+  outline: 3px solid #fff;
+  outline-offset: 5px;
+  border-radius: 3px;
+}
+
 .footer {
   background-color: #041827;
 }
 
 .footer .container {
-  padding: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding: 50px 30px 10px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 23px;
+}
+
+.footer__links {
+  margin-right: auto;
 }
 
 .footer a,
@@ -1265,16 +1351,75 @@ address {
 }
 
 .footer h3 {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  font-family: "Roboto Condensed";
   color: #E5E5E5;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer__block {
+  width: 30%;
+  padding: 6px 20px;
+}
+
+.footer__block--nav {
+  width: 41%;
+}
+
+.footer__block--nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+  height: 150px;
+  padding: 0;
+}
+
+.footer__block li {
+  width: 45%;
+}
+
+.footer__block--nav a {
+  display: block;
+  padding: 3px 0 4px;
+}
+
+.footer__block--contacts a {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.footer address {
+  margin: 25px 0 8px;
 }
 
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding-left: 9px;
+}
+
+.socials li {
+  margin-right: 15px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -1340,5 +1485,27 @@ address {
   .page input:hover,
   .page button:hover {
     outline: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../../img/bg-intro-desktop-2x.webp");
+  }
+
+  .aboutus .container::before {
+    background-image: url("../../img/bg-aboutus-desktop-2x.webp");
+  }
+
+  .catalog__item--production {
+    background-image: url("../../img/bg-card-production-desktop-2x.webp");
+  }
+
+  .catalog__item--installation {
+    background-image: url("../../img/bg-card-installation-desktop-2x.webp");
+  }
+
+  .catalog__item--details {
+    background-image: url("../../img/bg-card-details-desktop-2x.webp");
   }
 }

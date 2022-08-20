@@ -153,19 +153,19 @@
           Smart Device предлагает следующие товары и услуги
         </h2>
         <ul>
-          <li>
+          <li class="catalog__item catalog__item--production">
             <a href="#">
               Производство печатных
               плат
             </a>
           </li>
-          <li>
-            <a>
+          <li class="catalog__item catalog__item--installation">
+            <a href="#">
               Монтаж печатных плат
             </a>
           </li>
-          <li>
-            <a>
+          <li class="catalog__item catalog__item--details">
+          <a href="#"   >
               Комплектующие
               для
               светотехники
@@ -177,9 +177,15 @@
     </section>
     <section class="form">
       <div class="container">
-        <picture>
-          <img src="img/img-form-plane-desktop-1x.png" alt="Изображение самолета">
+     <div class="form__img">
+          <picture>
+             <!-- 1x: 510px; 2x: 1020px -->
+            <img width="510" height="285" srcset="img/img-form-plane-desktop-2x.webp 2x"
+            src="img/img-form-plane-desktop-1x.webp" alt="Изображение самолета" loading="lazy">
+
         </picture>
+        </div>
+
         <div class="form__block">
         <h2>
           Остались вопросы? Задайте их нам!
@@ -200,12 +206,12 @@
             <textarea>
 Ваш вопрос
       </textarea>
-            <button class="application__button button">
+            <button class="button">
               Задать вопрос
             </button>
-            <p>
+            <p class="form__agreement">
               <input type="checkbox" id="agreement" name="check-agreement" required checked class="visually-hidden">
-              <label for="agreement">
+              <label for="agreement" >
                 Я&nbsp;согласен на&nbsp;обработку персональных данных
               </label>
             </p>
@@ -225,28 +231,28 @@
         <ul class="footer__socials socials">
           <li>
             <a href="#" class="socials__link">
-              <svg width="30" height="30" role="img" aria-label="Логотип Pinterest">
+              <svg width="40" height="40" role="img" aria-label="Логотип Pinterest">
                 <use xlink:href="img/sprite_auto.svg#logo-pinterest"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="#" class="socials__link">
-              <svg width="30" height="30" role="img" aria-label="Логотип Одноклассники">
+              <svg width="40" height="40" role="img" aria-label="Логотип Одноклассники">
                 <use xlink:href="img/sprite_auto.svg#logo-odnoklassniky"></use>
               </svg>
             </a>
           </li>
           <li>
             <a href="#" class="socials__link">
-              <svg width="30" height="30" role="img" aria-label="Логотип Вконтакте">
+              <svg width="40" height="40" role="img" aria-label="Логотип Вконтакте">
                 <use xlink:href="img/sprite_auto.svg#logo-vk"></use>
               </svg>
             </a>
           </li>
         </ul>
       </div>
-      <div class="footer__nav">
+      <div class="footer__block footer__block--nav">
         <h3>Разделы сайта</h3>
         <ul>
           <li>
@@ -286,7 +292,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer__contacts">
+      <div class="footer__block footer__block--contacts">
         <h3>
           Наш офис
         </h3>

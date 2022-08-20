@@ -1,4 +1,11 @@
 .socials {
   display: flex;
-justify-content: space-between;
+
+
+  @include reset-ul;
+  padding-left: 9px;
+}
+
+.socials li {
+  margin-right: 15px;;
 }

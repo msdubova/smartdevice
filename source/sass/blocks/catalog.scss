@@ -13,14 +13,12 @@
 .catalog h2 {
   margin-bottom: 54px;
 
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 51px;
+  font-family: "Roboto Condensed";
   color: white;
-  font-family: 'Roboto Condensed';
-font-style: normal;
-font-weight: 400;
-font-size: 36px;
-line-height: 51px;
-
-
 }
 
 .catalog ul {
@@ -36,11 +34,51 @@ line-height: 51px;
   height: 650px;
   margin-right: 85px;
 
-  background: url("../../img/bg-card-production-desktop-1x.png");
+  background-color: cadetblue;
   &:nth-child(3n) {
     margin-right: 0;
   }
+}
 
+.catalog__item {
+  background-size: cover;
+  background-color: black;
+  &--production {
+    background-image: url("../../img/bg-card-production-desktop-1x.webp");
+    @include retina () {
+      background-image: url("../../img/bg-card-production-desktop-2x.webp");
+    }
+  }
+  &--installation {
+    background-image: url("../../img/bg-card-installation-desktop-1x.webp");
+    @include retina () {
+      background-image: url("../../img/bg-card-installation-desktop-2x.webp");
+    }
+  }
+  &--details {
+    background-image: url("../../img/bg-card-details-desktop-1x.webp");
+    @include retina () {
+      background-image: url("../../img/bg-card-details-desktop-2x.webp");
+    }
+  }
+}
+.catalog a {
+  position: relative;
+
+  display: block;
+  height: 100%;
+  padding: 48px 140px 48px 40px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Roboto Condensed";
+  color: #ffffff;
+  &:hover,
+  &:focus-within {
+    outline: 3px solid #ffffff;
+    outline-offset: 5px;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -54,21 +92,5 @@ line-height: 51px;
     background-image: url("../../img/svg/icon-vector.svg");
     background-repeat: no-repeat;
     background-position: center;
-  }
-}
-
-.catalog a {
-  display: block;
-  height: 100%;
-  padding: 48px 140px 48px 40px;
-
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 30px;
-  font-family: "Roboto Condensed";
-  color: #ffffff;
-  &:hover {
-    outline: 3px solid #fff;
-    outline-offset: 5px;
   }
 }

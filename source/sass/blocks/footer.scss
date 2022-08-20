@@ -3,13 +3,22 @@
 }
 
 .footer .container {
-  padding: 50px;
   display: flex;
-justify-content: space-between;
+  justify-content: space-between;
+  padding: 50px 30px 10px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 23px;
+}
+
+.footer__links {
+  margin-right: auto;
 }
 
 .footer a,
-address{
+address {
   color: $color-default-white;
 }
 
@@ -19,5 +28,49 @@ address{
 // }
 
 .footer h3 {
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  font-family: "Roboto Condensed";
   color: $color-default-white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer__block {
+  width: 30%;
+  padding: 6px 20px;
+}
+
+.footer__block--nav {
+  width: 41%;
+}
+.footer__block--nav ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 150px;
+  padding: 0;
+}
+
+.footer__block li {
+  width: 45%;
+}
+.footer__block--nav a {
+  display: block;
+  padding: 3px 0 4px;
+}
+
+.footer__block--contacts a {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.footer address {
+  margin: 25px 0 8px;
 }
