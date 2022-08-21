@@ -6,7 +6,7 @@
   @include reset-ul();
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   width: 100%;
   // @include vp-767 {
   //   position: relative;
@@ -20,7 +20,8 @@
   //     background-image: url("../img/svg/logo-antarctica--nav.svg");
   //   }
   // }
-  padding: 0 10px 0 150px;
+  padding: 0  10px;
+  margin-left: auto;
 @include vp-1023 {
   justify-content: flex-end;
 
@@ -32,8 +33,11 @@
 }
 
 .nav li {
-  width: 40%;
+  width: 250px;
+
   padding-top: 4px;
+  padding-left: 10px;
+
   @include vp-1023 {
     width: 40px;
     margin-left: 20px;
@@ -43,7 +47,7 @@
 .nav a {
   display: flex;
   align-items: center;
-
+  justify-content: flex-start;
   font-size: 16px;
   line-height: 18px;
   color: $color-primary-white;
