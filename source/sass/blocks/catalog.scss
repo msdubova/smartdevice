@@ -12,6 +12,10 @@
   @include vp-1023 {
     padding: 25px 50px 45px 50px;
   }
+
+  @include vp-767 {
+    padding:22px 26px 86px 26px;
+  }
 }
 
 .catalog h2 {
@@ -27,34 +31,59 @@
   @include vp-1023 {
     margin-bottom: 39px;
   }
+
+  @include vp-767 {
+    font-size: 28px;
+line-height: 39px;
+margin-bottom: 30px;
+  }
 }
 
 .catalog h3 {
-  padding: 0;
   margin: 0;
+  padding: 0;
 
-font-family: 'Roboto Condensed';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Roboto Condensed";
 
-font-weight: 400;
-font-size: 20px;
+  @include vp-1023 {
+    width: 35%;
+  }
+
+  @include vp-767 {
+    width: 80%;
+    font-size: 18px;
 line-height: 30px;
-
-@include vp-1023 {
-  width: 35%;
+  }
 }
+
+
+.catalog__name {
+
+
+  &--desktop {
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @include vp-767 {
+      display: block;
+    }
+  }
 }
 .catalog ul {
   display: flex;
 
   @include reset-ul;
-
-
   @include vp-1023 {
-
     flex-direction: column;
-
   }
-
 }
 
 .catalog li {
@@ -65,57 +94,91 @@ line-height: 30px;
   margin-right: auto;
 
   background-color: cadetblue;
-  &:nth-child(3n) {
-    margin-right: 0;
-  }
-
 
   @include vp-1023 {
     width: 100%;
     height: 250px;
     margin-right: 0;
     margin-bottom: 30px;
-   }
+  }
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .catalog__item {
-  background-size: cover;
   background-color: black;
+  background-size: cover;
   &--production {
     background-image: url("../../img/bg-card-production-desktop-1x.webp");
+
     @include retina () {
       background-image: url("../../img/bg-card-production-desktop-2x.webp");
     }
-
     @include vp-1023 {
       background-image: url("../../img/bg-card-production-tablet-1x.webp");
-    @include retina () {
-      background-image: url("../../img/bg-card-production-tablet-2x.webp");
+
+      @include retina () {
+        background-image: url("../../img/bg-card-production-tablet-2x.webp");
+      }
     }
+    @include vp-767 {
+      background-image: url("../../img/bg-card-production-mobile-1x.webp");
+
+      @include retina () {
+        background-image: url("../../img/bg-card-production-mobile-2x.webp");
+      }
     }
   }
   &--installation {
     background-image: url("../../img/bg-card-installation-desktop-1x.webp");
+
     @include retina () {
       background-image: url("../../img/bg-card-installation-desktop-2x.webp");
     }
     @include vp-1023 {
       background-image: url("../../img/bg-card-installation-tablet-1x.webp");
-    @include retina () {
-      background-image: url("../../img/bg-card-installation-tablet-2x.webp");
+
+      @include retina () {
+        background-image: url("../../img/bg-card-installation-tablet-2x.webp");
+      }
     }
+
+    @include vp-767 {
+      background-image: url("../../img/bg-card-installation-mobile-1x.webp");
+
+      @include retina () {
+        background-image: url("../../img/bg-card-installation-mobile-2x.webp");
+      }
     }
   }
+
   &--details {
     background-image: url("../../img/bg-card-details-desktop-1x.webp");
+
     @include retina () {
       background-image: url("../../img/bg-card-details-desktop-2x.webp");
     }
+
     @include vp-1023 {
       background-image: url("../../img/bg-card-details-tablet-1x.webp");
-    @include retina () {
-      background-image: url("../../img/bg-card-details-tablet-2x.webp");
+
+      @include retina () {
+        background-image: url("../../img/bg-card-details-tablet-2x.webp");
+      }
     }
+    @include vp-767 {
+      background-image: url("../../img/bg-card-details-mobile-1x.webp");
+
+      @include retina () {
+        background-image: url("../../img/bg-card-details-mobile-2x.webp");
+      }
     }
   }
 }
@@ -131,11 +194,17 @@ line-height: 30px;
   line-height: 30px;
   font-family: "Roboto Condensed";
   color: #ffffff;
+
+  @include vp-1023 {
+    padding: 37px 45px;
+  }
+
   &:hover,
   &:focus-within {
     outline: 3px solid #ffffff;
     outline-offset: 5px;
   }
+
   &::before {
     content: "";
     position: absolute;
@@ -149,8 +218,15 @@ line-height: 30px;
     background-image: url("../../img/svg/icon-vector.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @include vp-767 {
+      width: 40px;
+    height: 40px;
+    }
   }
-  @include vp-1023 {
-    padding: 37px 45px;
+
+  @include vp-767 {
+    padding: 26px 30px;
+
   }
 }

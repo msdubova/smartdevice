@@ -28,7 +28,14 @@
   }
 
 }
+.form_modal {
 
+  &::before {
+    display: none;
+  }
+min-height: auto;
+
+}
 .form .container {
   display: flex;
   justify-content: flex-start;
@@ -38,7 +45,7 @@
   }
 
   @include vp-767 {
-    padding: 25px;
+    padding: 48px 25px 67px 25px;
     }
 }
 
@@ -131,7 +138,7 @@ padding-left: 6px;
   @include vp-767 {
     font-size: 14px;
 line-height: 19px;
-
+margin-bottom:  34px;
   }
 }
 
@@ -140,7 +147,7 @@ line-height: 19px;
 margin-bottom: 23px;
 @include vp-767 {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   margin-top: 0
 }
 }
@@ -163,6 +170,10 @@ margin-bottom: 23px;
     font-family: "PT Mono";
     color: #ffffff;
   }
+
+  @include vp-767 {
+    padding: 15px 15px 16px 15px;
+  }
 }
 
 .form textarea {
@@ -183,6 +194,11 @@ margin-bottom: 23px;
     outline-offset: 5px;
   }
   margin-bottom: 20px;
+
+  @include vp-767 {
+    margin-bottom: 29px;
+    min-height: 180px;
+  }
 }
 
 .form .button {
@@ -203,8 +219,13 @@ margin-bottom: 23px;
   padding-top: 15px;
   margin-top: 0;
 
+
+  @include vp-1023 {
+    width: 265px;
+  }
   @include vp-767 {
     width: 100%;
+    margin-bottom: 12px;
   }
 }
 
@@ -256,5 +277,9 @@ margin-bottom: 23px;
   outline: 3px solid #fff;
   outline-offset: 5px;
   border-radius: 3px;
+}
+
+@include vp-767 {
+  padding-left: 10px;
 }
 }

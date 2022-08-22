@@ -4,6 +4,13 @@
 
   @include reset-ul;
   padding-left: 9px;
+
+
+  @include vp-767 {
+    width: 150px;
+padding-left: 0;
+justify-content: space-between;
+  }
 }
 
 .socials li {
@@ -12,5 +19,9 @@
   @include vp-1023 {
     margin-left: 15px;
     margin-right: 0px;
+  }
+
+  @include vp-767 {
+margin-left: 0;
   }
 }
