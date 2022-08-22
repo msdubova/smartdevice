@@ -24,13 +24,11 @@
   @include vp-767 {
     min-height: 560px;
 
-
     background-image: url("../../img/bg-intro-mobile-1x.webp");
 
     @include retina () {
       background-image: url("../../img/bg-intro-mobile-2x.webp");
     }
-
   }
 }
 
@@ -69,7 +67,8 @@
   @include vp-767 {
     width: 35px;
     height: 35px;
-margin-top: 5px;
+    margin-top: 5px;
+
     background-image: url("../../img/svg/logo-mobile.svg");
   }
 }
@@ -115,9 +114,10 @@ margin-top: 5px;
   }
 
   @include vp-767 {
+    margin-bottom: 8px ;
+
     font-size: 36px;
     line-height: 42px;
-    margin-bottom: 8px ;
   }
 }
 
@@ -138,10 +138,10 @@ margin-top: 5px;
 
   @include vp-767 {
     width: auto;
+    margin-bottom: 35px;
 
     font-size: 14px;
     line-height: 22px;
-    margin-bottom: 35px;
   }
 }
 
@@ -166,16 +166,12 @@ margin-top: 5px;
   }
 
   @include vp-767 {
-   width: 100%;
-   margin-left: 0;
-   padding: 11px;
+    width: 100%;
+    margin-left: 0;
+    padding: 11px;
 
-
-
-font-size: 14px;
-line-height: 16px;
-
-
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 

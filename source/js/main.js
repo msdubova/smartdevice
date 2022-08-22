@@ -1,5 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+// import { addListener } from 'gulp';
+
 
 // ---------------------------------
 
@@ -44,3 +46,37 @@ window.addEventListener('DOMContentLoaded', () => {
 // breakpointChecker();
 
 // используйте .closest(el)
+
+
+
+
+// Открытие,закрытие модального окна Заказать звонок
+function controlModal() {
+
+const modalBlock = document.querySelector('.modal');
+const callButton = document.querySelector('.header__button');
+const closeButton = modalBlock.querySelector('.modal__button-close');
+const body = document.querySelector('.page');
+
+
+function closeModal () {
+  modalBlock.classList.add('visually-hidden');
+  body.classList.remove('scroll-lock');
+}
+
+function openModal () {
+  modalBlock.classList.remove('visually-hidden');
+  body.classList.add('scroll-lock');
+
+  closeButton.addEventListener('click', function(){
+    closeModal();
+  })
+}
+
+
+ callButton.addEventListener('click', function (){
+   openModal();
+ })
+}
+
+controlModal();
