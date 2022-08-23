@@ -132,52 +132,153 @@ controlModal();
   maskPhone();
 
 
+// функция которая отслеживает размер вьюпорта чтоб запустиьт функции на опрелеленный вьюпорт
+ function setResize(doIt){
 
-
-  // accorderon
-
-
-  function setAccordeon () {
+  if (window.innerWidth < 768){
+    doIt();
+  } else {
+  window.addEventListener('resize', function() {
     if (window.innerWidth < 768){
-      const buttons = document.querySelectorAll('.footer__toggle');
-      const accordeons = document.querySelectorAll('.accordeon__block');
-
-      for (let i = 0; i < accordeons.length; i++) {
-
-        accordeons[i].classList.add('accordeon__block--closed');
-        }
+      doIt();
+    }
+  }, true);
+  }}
 
 
-      for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', function(){
-          for (let y = 0; y < accordeons.length; y++) {
-            if (y!=i){
+function setAccordeon () {
+  // if (window.innerWidth < 768){
+    const buttons = document.querySelectorAll('.footer__toggle');
+    const accordeons = document.querySelectorAll('.accordeon__block');
+
+    for (let i = 0; i < accordeons.length; i++) {
+
+      accordeons[i].classList.add('accordeon__block--closed');
+      }
+
+
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', function(){
+        for (let y = 0; y < accordeons.length; y++) {
+          if (y!=i){
 accordeons[y].classList.add('accordeon__block--closed');
-            }
-
           }
 
-            console.log(accordeons);
-
-
-            // if (accordeons[i].classList.contains('accordeon__block--closed')) {
-
-            //   accordeons[i].classList.remove('accordeon__block--closed');
-
-            // } else {
-            //   accordeons[i].classList.add('accordeon__block--closed');
-            //   // alert('dd')
-            // }
-
- accordeons[i].classList.toggle('accordeon__block--closed');
-console.log(accordeons);
-
-        })
         }
-      };
 
+          // console.log(accordeons);
+
+
+          // if (accordeons[i].classList.contains('accordeon__block--closed')) {
+
+          //   accordeons[i].classList.remove('accordeon__block--closed');
+
+          // } else {
+          //   accordeons[i].classList.add('accordeon__block--closed');
+          //   // alert('dd')
+          // }
+
+accordeons[i].classList.toggle('accordeon__block--closed');
+// console.log(accordeons);
+
+      })
+      }
+    // };
+
+};
+
+
+
+setResize(setAccordeon);
+// подробнее о нас
+
+
+
+
+
+
+
+function setTextAccordeon (){
+const button  = document.querySelector('.aboutus__button');
+const hiddenElements = document.querySelectorAll('.aboutus__hidden');
+const hiddenElementDesktop = document.querySelector('.aboutus__hidden--desktop');
+const hiddenElementMobile = document.querySelector('.aboutus__hidden--mobile');
+for (let y= 0; y < hiddenElements.length; y++) {
+  if( window.innerWidth < 768) {
+     hiddenElements[y].classList.add('visually-hidden');
+} else {
+hiddenElementDesktop.classList.add('visually-hidden')
+}
+};
+
+
+function setResizeRead () {
+
+  window.addEventListener('resize', function() {
+  if (window.innerWidth < 768) {
+
+  for(let i= 0; i < hiddenElements.length; i++){
+    hiddenElements[i].classList.add('visually-hidden');
+ }} else {
+if (hiddenElementDesktop.classList.contains('visually-hidden')) {
+hiddenElementDesktop.classList.remove('visually-hidden')
+}
+
+if (hiddenElementMobile.classList.contains('visually-hidden')){
+  hiddenElementMobile.classList.remove('visually-hidden')
+}
+
+ }
+  });
+
+};
+
+ function readMore () {
+button.addEventListener('click', function () {
+
+  if (button.innerHTML=="Подробнее"){
+    button.innerHTML="Cвернуть";
+  } else {
+     button.innerHTML="Подробнее" ;
+  }
+
+  if (window.innerWidth < 768) {
+    for(let i= 0; i < hiddenElements.length; i++){
+      hiddenElements[i].classList.toggle('visually-hidden');
+   }} else {
+  hiddenElementDesktop.classList.toggle('visually-hidden')
+   }
+
+    }
+
+)
  };
 
+setResizeRead();
+readMore();
+};
 
 
-  setAccordeon();
+
+
+setTextAccordeon();
+
+
+
+
+
+//  function readMoreDesktop ()
+//  {
+
+//   const button  = document.querySelector('.aboutus__button');
+
+//   button.addEventListener('click', function () {
+//     const hiddenElement = document.querySelector('.aboutus__hidden');
+
+
+//           hiddenElement.classList.add('visually-hidden');
+
+//         })
+//    };
+
+// readMore();

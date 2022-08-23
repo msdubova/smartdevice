@@ -113,7 +113,11 @@
   }
 }
 
-.aboutus .hidden {
-  @include visually-hidden;
-}
+// .aboutus__hidden {
+//   display: none;
+
+//   &--desktop {
+//     display: none;
+//   }
+// }
 
