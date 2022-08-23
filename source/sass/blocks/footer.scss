@@ -158,9 +158,7 @@ address {
 
 
 .footer__block ul {
-  @include vp-767 {
-    display: none;
-  }
+
 }
 .footer__block--nav {
   width: 70%;

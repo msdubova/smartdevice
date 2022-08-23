@@ -130,3 +130,54 @@ controlModal();
   }
 
   maskPhone();
+
+
+
+
+  // accorderon
+
+
+  function setAccordeon () {
+    if (window.innerWidth < 768){
+      const buttons = document.querySelectorAll('.footer__toggle');
+      const accordeons = document.querySelectorAll('.accordeon__block');
+
+      for (let i = 0; i < accordeons.length; i++) {
+
+        accordeons[i].classList.add('accordeon__block--closed');
+        }
+
+
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function(){
+          for (let y = 0; y < accordeons.length; y++) {
+            if (y!=i){
+accordeons[y].classList.add('accordeon__block--closed');
+            }
+
+          }
+
+            console.log(accordeons);
+
+
+            // if (accordeons[i].classList.contains('accordeon__block--closed')) {
+
+            //   accordeons[i].classList.remove('accordeon__block--closed');
+
+            // } else {
+            //   accordeons[i].classList.add('accordeon__block--closed');
+            //   // alert('dd')
+            // }
+
+ accordeons[i].classList.toggle('accordeon__block--closed');
+console.log(accordeons);
+
+        })
+        }
+      };
+
+ };
+
+
+
+  setAccordeon();
