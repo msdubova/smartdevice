@@ -282,22 +282,3 @@ readMore();
 
 setTextAccordeon();
 
-
-
-
-
-//  function readMoreDesktop ()
-//  {
-
-//   const button  = document.querySelector('.aboutus__button');
-
-//   button.addEventListener('click', function () {
-//     const hiddenElement = document.querySelector('.aboutus__hidden');
-
-
-//           hiddenElement.classList.add('visually-hidden');
-
-//         })
-//    };
-
-// readMore();

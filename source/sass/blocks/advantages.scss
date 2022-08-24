@@ -99,11 +99,12 @@
     }
 
     li {
+      margin-bottom: 29.5px;
       width: 100%;
       min-height: 325px;
       // padding: 30px 25px 30px 25px;
       margin-right: 0;
-      padding: 29px 25px 75px 25px;
+      padding: 30px 25px 75px 25px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -118,12 +119,6 @@
       height: 30px;
     }
 
-    dt {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 21.9px;
-      font-family: "PT Mono";
-    }
   }
 
 

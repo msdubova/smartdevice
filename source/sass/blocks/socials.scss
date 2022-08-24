@@ -1,8 +1,9 @@
 .socials {
-  display: flex;
-  padding-left: 9px;
-
   @include reset-ul;
+  display: flex;
+  padding-left: 10px;
+
+
   @include vp-1023 {
     li {
       margin-right: 0;

@@ -1008,6 +1008,14 @@ button,
   margin-bottom: 20px;
 }
 
+.aboutus__hidden {
+  display: none;
+}
+
+.aboutus__hidden--desktop {
+  display: none;
+}
+
 .catalog {
   background-color: #041827;
 }
@@ -1449,13 +1457,13 @@ address {
 }
 
 .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 9px;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
 }
 
 .socials li {
@@ -1674,6 +1682,7 @@ address {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+    padding-right: 10px;
   }
 
   .nav li {
@@ -1748,8 +1757,12 @@ address {
     margin-bottom: 39px;
   }
 
+  .catalog h2 {
+    margin-bottom: 38px;
+  }
+
   .catalog h3 {
-    width: 35%;
+    width: 30%;
   }
 
   .catalog li {
@@ -1780,11 +1793,16 @@ address {
   }
 
   .form fieldset {
-    padding-left: 0;
+    padding-left: 0px;
   }
 
   .form legend {
     margin-bottom: 9px;
+  }
+
+  .form textarea {
+    padding: 32px 11px;
+    margin-bottom: 23px;
   }
 
   .form .container {
@@ -1812,6 +1830,11 @@ address {
 
   .form__img {
     display: none;
+  }
+
+  .form__agreement {
+    padding-top: 7px;
+    padding-left: 3px;
   }
 
   .footer .container {
@@ -1925,7 +1948,7 @@ address {
   }
 
   .header__sticker .container {
-    padding: 10px 27px 16px 26px;
+    padding: 10px 27px 20px 26px;
   }
 
   .header__logo {
@@ -1936,7 +1959,7 @@ address {
   }
 
   .header__intro .container {
-    padding: 54px 26px 25px;
+    padding: 50px 25px 25px;
   }
 
   .header__intro h2 {
@@ -1947,7 +1970,7 @@ address {
 
   .header__intro p {
     width: auto;
-    margin-bottom: 35px;
+    margin-bottom: 34px;
     font-size: 14px;
     line-height: 22px;
   }
@@ -1955,7 +1978,7 @@ address {
   .header__intro .button {
     width: 100%;
     margin-left: 0;
-    padding: 11px;
+    padding: 12px;
     font-size: 14px;
     line-height: 16px;
   }
@@ -1981,10 +2004,11 @@ address {
   }
 
   .advantages li {
+    margin-bottom: 29.5px;
     width: 100%;
     min-height: 325px;
     margin-right: 0;
-    padding: 29px 25px 75px 25px;
+    padding: 30px 25px 75px 25px;
   }
 
   .advantages li:last-child {
@@ -2000,19 +2024,12 @@ address {
     height: 30px;
   }
 
-  .advantages dt {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21.9px;
-    font-family: "PT Mono";
-  }
-
   .aboutus .button {
     display: block;
     width: 59.1%;
-    margin-top: -7px;
     padding: 8px;
     text-align: center;
+    margin-bottom: 3px;
   }
 
   .aboutus .container {
@@ -2038,7 +2055,7 @@ address {
   }
 
   .catalog .container {
-    padding: 22px 26px 86px 26px;
+    padding: 25px 25px 86px 25px;
   }
 
   .catalog .catalog {
@@ -2047,8 +2064,14 @@ address {
     line-height: 39px;
   }
 
+  .catalog h2 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 28px;
+  }
+
   .catalog h3 {
-    width: 80%;
+    width: 75%;
     font-size: 18px;
     line-height: 30px;
   }
@@ -2088,12 +2111,13 @@ address {
 
   .form .button {
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
   }
 
   .form textarea {
-    min-height: 180px;
-    margin-bottom: 29px;
+    min-height: 181px;
+    margin-bottom: 30px;
+    padding: 26px 15px;
   }
 
   .form input {
@@ -2103,11 +2127,15 @@ address {
   .form p {
     width: 100%;
     margin-top: 0;
-    margin-bottom: 22px;
+    margin-bottom: 21px;
+  }
+
+  .form fieldset {
+    margin: 0;
   }
 
   .form legend {
-    margin-bottom: 34px;
+    margin-bottom: 33px;
     font-size: 14px;
     line-height: 19px;
   }
@@ -2126,7 +2154,7 @@ address {
   }
 
   .footer .container {
-    padding: 35px 26px 35px 25px;
+    padding: 35px 20px 35px 25px;
   }
 
   .footer h3 {
@@ -2147,6 +2175,7 @@ address {
     -ms-flex-align: center;
     align-items: center;
     margin-bottom: 15px;
+    padding-right: 8px;
   }
 
   .footer a,

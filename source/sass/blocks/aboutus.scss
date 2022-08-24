@@ -19,10 +19,11 @@
     .button {
       display: block;
       width: 59.1%;
-      margin-top: -7px;
+
       padding: 8px;
 
       text-align: center;
+      margin-bottom: 3px;
     }
 
     .container {
@@ -113,11 +114,11 @@
   }
 }
 
-// .aboutus__hidden {
-//   display: none;
+.aboutus__hidden {
+  display: none;
 
-//   &--desktop {
-//     display: none;
-//   }
-// }
+  &--desktop {
+    display: none;
+  }
+}
 
