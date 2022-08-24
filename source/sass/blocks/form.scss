@@ -10,15 +10,18 @@
     min-height: 580px;
 
     fieldset {
-      padding-left: 0px;
+      padding-left: 0;
     }
+
     legend {
       margin-bottom: 9px;
     }
+
     textarea {
-      padding: 32px 11px;
       margin-bottom: 23px;
+      padding: 32px 11px;
     }
+
     .container {
       padding: 45px 50px;
     }
@@ -44,6 +47,7 @@
       width: 100%;
       margin-bottom: 18px;
     }
+
     textarea {
       min-height: 181px;
       margin-bottom: 30px;
@@ -57,11 +61,13 @@
     p {
       width: 100%;
       margin-top: 0;
-      margin-bottom: 21px;;
+      margin-bottom: 21px;
     }
 
     fieldset {
-      margin: 0;}
+      margin: 0;
+    }
+
     legend {
       margin-bottom: 33px;
 
@@ -77,6 +83,10 @@
       font-size: 30px;
       line-height: 42px;
     }
+  }
+
+  & * {
+    color: $color-secondary-white;
   }
 
   &::before {
@@ -102,12 +112,8 @@
     display: block;
     padding-left: 20px;
 
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    font-family: "PT Mono";
-    color: #ffffff;
 
     opacity: 0.8;
 
@@ -120,7 +126,7 @@
       width: 15px;
       height: 15px;
 
-      border: 2px #ffffff solid;
+      border: 2px $color-secondary-white solid;
       border-radius: 2px;
     }
   }
@@ -131,12 +137,11 @@
     margin-bottom: 20px;
     padding: 25px 11px;
 
-    color: #ffffff;
-
     background: rgba(4, 20, 39, 0.15);
     border: none;
     border-radius: 3px;
     box-shadow: none;
+
     &:focus-visible,
     &:hover {
       outline: auto;
@@ -148,22 +153,19 @@
     width: 100%;
     padding: 15px;
 
-    color: #ffffff;
-
     background: rgba(4, 20, 39, 0.15);
     border: none;
     border-radius: 5px;
     box-shadow: none;
+
     &::placeholder {
-      font-weight: 400;
       font-size: 16px;
       line-height: 22px;
-      font-family: "PT Mono";
-      color: #ffffff;
+      color: $color-secondary-white;
     }
   }
 
-  input[type=checkbox]:checked + label {
+  input[type="checkbox"]:checked + label {
     &::before {
       background-image: url("../../img/svg/icon-vector.svg");
       background-repeat: no-repeat;
@@ -178,12 +180,8 @@
     margin-bottom: 20px;
     padding: none;
 
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    font-family: "PT Mono";
-    color: $color-default-white;
   }
 
   p {
@@ -225,13 +223,9 @@
   h2 {
     margin-bottom: 12px;
 
-    font-weight: 400;
     font-size: 36px;
     line-height: 51px;
-    font-family: Roboto Condensed;
     text-align: left;
-    color: $color-default-white;
-    letter-spacing: 0;
   }
 
   .button {
@@ -242,12 +236,9 @@
     margin-top: 0;
     padding-top: 15px;
 
-    font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    font-family: "Roboto Condensed";
-    text-align: center;
-    letter-spacing: 0.05em;
+    vertical-align: middle;
 
     background-color: $color-default-black;
     border: none;
@@ -256,8 +247,23 @@
 
 .form_modal {
   min-height: auto;
+
   &::before {
     display: none;
+  }
+
+  input:hover,
+  input:focus,
+  input:active {
+    outline: 3px solid $color-primary-white;
+    outline-offset: 0;
+  }
+
+  textarea:hover,
+  textarea:focus,
+  textarea:active {
+    outline: 3px solid $color-primary-white;
+    outline-offset: 0;
   }
 }
 
@@ -278,15 +284,16 @@
 
   @include vp-1023 {
     padding-top: 7px;
-   padding-left: 3px;
+    padding-left: 3px;
   }
+
   @include vp-767 {
     padding-left: 10px;
   }
 
   &:focus-within {
     border-radius: 3px;
-    outline: 3px solid #ffffff;
+    outline: 3px solid $color-secondary-white;
     outline-offset: 5px;
   }
 }

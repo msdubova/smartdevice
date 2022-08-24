@@ -48,8 +48,6 @@ window.addEventListener('DOMContentLoaded', () => {
 // используйте .closest(el)
 
 
-
-
 // Открытие,закрытие модального окна Заказать звонок
 function controlModal() {
 

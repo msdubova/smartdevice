@@ -1,28 +1,27 @@
 .page {
-  background-color: white;
+  background-color: $color-secondary-white;
   box-sizing: border-box;
   min-width: 320px;
   height: 100%;
 
   font-style: normal;
   font-weight: 400;
-  font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  font-family: "PT Mono";
+  font-family: "PT Mono", "Times New Roman", serif;
   text-align: left;
   letter-spacing: 0;
 
   scroll-behavior: smooth;
-
 }
 
 .page a,
 .page input,
 .page button {
   border-radius: 3px;
+
   &:hover {
-    outline: 3px solid #fff;
+    outline: 3px solid $color-primary-white;
     outline-offset: 5px;
     // outline-color: $color-outline;
     opacity: 0.8;
@@ -33,16 +32,24 @@
   }
 
   &:focus {
-    outline: 3px solid #fff;
+    outline: 3px solid $color-primary-white;
     outline-offset: 5px;
-    // outline-color: $color-outline;
   }
 
   &:active {
-    outline: 3px solid #fff;    outline-offset: 5px;
+    outline: 3px solid $color-primary-white;
+    outline-offset: 5px;
   }
 
   &:disabled {
     opacity: 0.1;
   }
+}
+
+.page h2,
+.page h3,
+.page dd {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }

@@ -14,10 +14,6 @@
       margin-bottom: 39px;
     }
 
-    h2 {
-      margin-bottom: 38px;
-    }
-
     h3 {
       width: 30%;
     }
@@ -47,11 +43,9 @@
     }
 
     h2 {
-      font-size: 28px;
-      line-height: 39px;
-      margin-bottom: 28px;
-
+      margin-top: 23px;
     }
+
     h3 {
       width: 75%;
 
@@ -71,7 +65,7 @@
   }
 
   & * {
-    color: white;
+    color: $color-secondary-white;
   }
 
   .container {
@@ -79,24 +73,15 @@
   }
 
   h2 {
-    margin-bottom: 54px;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 51px;
-    font-family: "Roboto Condensed";
-    color: white;
+    margin-top: 30px;
   }
 
   h3 {
     margin: 0;
     padding: 0;
 
-    font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    font-family: "Roboto Condensed";
   }
 
   ul {
@@ -108,11 +93,12 @@
   li {
     position: relative;
 
-    width: 350px ;
+    width: 350px;
     height: 650px;
     margin-right: auto;
 
-    background-color: cadetblue;
+    background-color: $color-bg-catalog-item;
+
     &:nth-child(3n) {
       margin-right: 0;
     }
@@ -125,15 +111,13 @@
     height: 100%;
     padding: 48px 140px 48px 40px;
 
-    font-weight: 400;
     font-size: 20px;
     line-height: 30px;
-    font-family: "Roboto Condensed";
-    color: #ffffff;
+    color: $color-secondary-white;
 
     &:hover,
     &:focus-within {
-      outline: 3px solid #ffffff;
+      outline: 3px solid $color-secondary-white;
       outline-offset: 5px;
     }
 
@@ -161,6 +145,25 @@
 
 
 .catalog__name {
+  display: block;
+
+  margin-bottom: 54px;
+
+  font-size: 36px;
+  line-height: 51px;
+  color: $color-secondary-white;
+
+  @include vp-1023 {
+    margin-bottom: 38px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+
+    font-size: 28px;
+    line-height: 39px;
+  }
+
   &--desktop {
     @include vp-767 {
       display: none;
@@ -176,17 +179,17 @@
   }
 }
 
-
-
 .catalog__item {
-  background-color: black;
+  background-color: $color-bg-catalog-item;
   background-size: cover;
-  &--production {
+
+  &-production {
     background-image: url("../../img/bg-card-production-desktop-1x.webp");
 
     @include retina () {
       background-image: url("../../img/bg-card-production-desktop-2x.webp");
     }
+
     @include vp-1023 {
       background-image: url("../../img/bg-card-production-tablet-1x.webp");
 
@@ -194,6 +197,7 @@
         background-image: url("../../img/bg-card-production-tablet-2x.webp");
       }
     }
+
     @include vp-767 {
       background-image: url("../../img/bg-card-production-mobile-1x.webp");
 
@@ -202,12 +206,14 @@
       }
     }
   }
-  &--installation {
+
+  &-installation {
     background-image: url("../../img/bg-card-installation-desktop-1x.webp");
 
     @include retina () {
       background-image: url("../../img/bg-card-installation-desktop-2x.webp");
     }
+
     @include vp-1023 {
       background-image: url("../../img/bg-card-installation-tablet-1x.webp");
 
@@ -215,6 +221,7 @@
         background-image: url("../../img/bg-card-installation-tablet-2x.webp");
       }
     }
+
     @include vp-767 {
       background-image: url("../../img/bg-card-installation-mobile-1x.webp");
 
@@ -224,12 +231,13 @@
     }
   }
 
-  &--details {
+  &-details {
     background-image: url("../../img/bg-card-details-desktop-1x.webp");
 
     @include retina () {
       background-image: url("../../img/bg-card-details-desktop-2x.webp");
     }
+
     @include vp-1023 {
       background-image: url("../../img/bg-card-details-tablet-1x.webp");
 
@@ -237,6 +245,7 @@
         background-image: url("../../img/bg-card-details-tablet-2x.webp");
       }
     }
+
     @include vp-767 {
       background-image: url("../../img/bg-card-details-mobile-1x.webp");
 

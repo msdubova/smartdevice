@@ -1,64 +1,4 @@
 .advantages {
-  background-color: white;
-
-  .container {
-      padding: 30px;
-    }
-
-    ul {
-      @include reset-ul;
-
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1222px;
-    }
-
-    li {
-      box-sizing: border-box;
-      width: 48.7%;
-      min-height: 300px;
-      margin-right: 2.6%;
-      margin-bottom: 30px;
-      padding: 40px 45px 35px 40px;
-
-      border: 1px solid rgba(235, 235, 235, 1);
-      border-left: 5px solid $color-primary-blue;
-      &:nth-child(2n) {
-        max-height: 340px;
-        margin-right: 0;
-      }
-
-      &:hover {
-        background-color: $color-primary-blue;
-        border-color: $color-primary-blue;
-
-        & * {
-          color: rgba(242, 245, 246, 1);
-        }
-
-        & svg {
-          fill: $color-default-white;
-        }
-      }
-    }
-
-    svg {
-      fill: $color-primary-blue;
-    }
-
-    dd {
-      align-items: center;
-      margin: 0;
-      margin-bottom: 13px;
-
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 34px;
-      font-family: "Roboto Condensed";
-      color: $color-primary-white;
-      color: $color-primary-blue;
-    }
-
   @include vp-1023 {
     dl {
       margin-top: 12px;
@@ -71,7 +11,7 @@
     li {
       width: 47.75%;
       min-height: 360px;
-      margin-right: 30px ;
+      margin-right: 30px;
       padding: 40px 45px 13px 40px;
     }
 
@@ -99,12 +39,12 @@
     }
 
     li {
-      margin-bottom: 29.5px;
       width: 100%;
       min-height: 325px;
-      // padding: 30px 25px 30px 25px;
       margin-right: 0;
+      margin-bottom: 29.5px;
       padding: 30px 25px 75px 25px;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -118,8 +58,61 @@
       width: 30px;
       height: 30px;
     }
-
   }
 
+  .container {
+    padding: 30px;
+  }
 
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1222px;
+
+    @include reset-ul;
+  }
+
+  li {
+    box-sizing: border-box;
+    width: 48.7%;
+    min-height: 300px;
+    margin-right: 2.6%;
+    margin-bottom: 30px;
+    padding: 40px 45px 35px 40px;
+
+    border: 1px solid rgba(235, 235, 235, 1);
+    border-left: 5px solid $color-primary-blue;
+
+    &:nth-child(2n) {
+      max-height: 340px;
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: $color-primary-blue;
+      border-color: $color-primary-blue;
+
+      & * {
+        color: $color-primary-white;
+      }
+
+      & svg {
+        fill: $color-default-white;
+      }
+    }
+  }
+
+  svg {
+    fill: $color-primary-blue;
+  }
+
+  dd {
+    align-items: center;
+    margin: 0;
+    margin-bottom: 13px;
+
+    font-size: 24px;
+    line-height: 34px;
+    color: $color-primary-blue;
+  }
 }
