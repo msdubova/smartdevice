@@ -217,16 +217,32 @@ function setResizeRead () {
   window.addEventListener('resize', function() {
   if (window.innerWidth < 768) {
 
+if (button.innerHTML=="Подробнее") {
   for(let i= 0; i < hiddenElements.length; i++){
     hiddenElements[i].classList.add('visually-hidden');
- }} else {
-if (hiddenElementDesktop.classList.contains('visually-hidden')) {
-hiddenElementDesktop.classList.remove('visually-hidden')
+ }
+} else {
+  for(let i= 0; i < hiddenElements.length; i++){
+    hiddenElements[i].classList.remove('visually-hidden');
+ }
 }
 
+
+
+  } else {
 if (hiddenElementMobile.classList.contains('visually-hidden')){
   hiddenElementMobile.classList.remove('visually-hidden')
 }
+    if (button.innerHTML=="Подробнее") {
+      hiddenElementDesktop.classList.add('visually-hidden')
+    } else {
+      if (hiddenElementDesktop.classList.contains('visually-hidden')) {
+hiddenElementDesktop.classList.remove('visually-hidden')
+}
+
+
+    }
+
 
  }
   });
@@ -236,11 +252,7 @@ if (hiddenElementMobile.classList.contains('visually-hidden')){
  function readMore () {
 button.addEventListener('click', function () {
 
-  if (button.innerHTML=="Подробнее"){
-    button.innerHTML="Cвернуть";
-  } else {
-     button.innerHTML="Подробнее" ;
-  }
+
 
   if (window.innerWidth < 768) {
     for(let i= 0; i < hiddenElements.length; i++){
@@ -248,6 +260,13 @@ button.addEventListener('click', function () {
    }} else {
   hiddenElementDesktop.classList.toggle('visually-hidden')
    }
+
+
+  if ((hiddenElementDesktop.classList.contains('visually-hidden'))){
+    button.innerHTML="Подробнее";
+  } else {
+     button.innerHTML="Свернуть" ;
+  }
 
     }
 
