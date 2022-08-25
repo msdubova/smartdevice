@@ -36,9 +36,10 @@
 }
 
 .header__sticker {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 100000;
 
   background: $black-to-right;
 }
@@ -85,14 +86,14 @@
 }
 
 .header__intro .container {
-  padding: 165px  50px 50px 155px;
+  padding: 280px  50px 50px 155px;
 
   @include vp-1023 {
-    padding: 48px 50px 25px;
+    padding: 148px 50px 25px;
   }
 
   @include vp-767 {
-    padding: 50px 25px 25px;
+    padding: 120px 25px 25px;
   }
 }
 

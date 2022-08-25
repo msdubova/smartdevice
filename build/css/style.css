@@ -631,6 +631,10 @@ button,
 }
 
 .button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -661,6 +665,10 @@ button,
 .button * {
   font-weight: inherit;
   font-family: inherit;
+}
+
+.button__name {
+  margin: 0 auto;
 }
 
 .button__name--mobile {
@@ -735,9 +743,10 @@ button,
 }
 
 .header__sticker {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 100000;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -769,7 +778,7 @@ button,
 }
 
 .header__intro .container {
-  padding: 165px  50px 50px 155px;
+  padding: 280px  50px 50px 155px;
 }
 
 .header__intro h2 {
@@ -1346,8 +1355,13 @@ address {
   padding: 7px 10px;
 }
 
+.footer__title {
+  cursor: pointer;
+}
+
 .footer__toggle {
   display: none;
+  cursor: pointer;
 }
 
 .footer__block-nav {
@@ -1574,7 +1588,7 @@ address {
   }
 
   .header__intro .container {
-    padding: 48px 50px 25px;
+    padding: 148px 50px 25px;
   }
 
   .header__intro h2 {
@@ -1857,7 +1871,7 @@ address {
   }
 
   .header__intro .container {
-    padding: 50px 25px 25px;
+    padding: 120px 25px 25px;
   }
 
   .header__intro h2 {
@@ -1883,7 +1897,7 @@ address {
   }
 
   .nav ul {
-    padding-right: 18px;
+    padding-right: 25px;
   }
 
   .advantages p {
@@ -2127,6 +2141,14 @@ address {
     background-repeat: no-repeat;
     background-position: center;
     border: none;
+  }
+
+  .footer__toggle--minus {
+    background-image: url("/img/svg/icon-minus.svg");
+  }
+
+  .footer__toggle--plus {
+    background-image: url("/img/svg/icon-plus.svg");
   }
 
   .footer__toggle:hover {

@@ -49,6 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 // Открытие,закрытие модального окна "Заказать звонок"
+
 function controlModal() {
 
   const modalBlock = document.querySelector('.modal');
@@ -128,8 +129,8 @@ function maskPhone() {
 
 maskPhone();
 
-
 // Функция которая отслеживает размер вьюпорта чтоб запустить функции, актуальные для разных вьюпортов
+
 function setResize(doIt) {
 
   if (window.innerWidth < 768) {
@@ -147,8 +148,9 @@ function setResize(doIt) {
 
 function setAccordeon() {
 
-  const buttons = document.querySelectorAll('.footer__toggle');
+  const buttons = document.querySelectorAll('.footer__title');
   const accordeons = document.querySelectorAll('.accordeon__block');
+  const pluses = document.querySelectorAll('.footer__toggle');
 
   for (let i = 0; i < accordeons.length; i++) {
     accordeons[i].classList.add('accordeon__block--closed');
@@ -159,15 +161,19 @@ function setAccordeon() {
       for (let y = 0; y < accordeons.length; y++) {
         if (y !== i) {
           accordeons[y].classList.add('accordeon__block--closed');
+          pluses[y].classList.remove('footer__toggle--minus');
+          pluses[y].classList.add('footer__toggle--plus');
         }
       }
       accordeons[i].classList.toggle('accordeon__block--closed');
+      pluses[i].classList.toggle('footer__toggle--plus');
+      pluses[i].classList.toggle('footer__toggle--minus');
     });
   }
 }
 
-
 setResize(setAccordeon);
+
 // Функция открытия закрытия аккордеона по типу "Подробнее" в разделе Aboutus
 
 function setTextAccordeon() {

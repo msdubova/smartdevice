@@ -123,6 +123,8 @@ address {
 }
 
 .footer__title {
+  cursor: pointer;
+
   @include vp-767 {
     display: flex;
     justify-content: space-between;
@@ -131,6 +133,7 @@ address {
 
 .footer__toggle {
   display: none;
+  cursor: pointer;
 
   @include vp-767 {
     display: block;
@@ -144,6 +147,14 @@ address {
     background-repeat: no-repeat;
     background-position: center;
     border: none;
+
+    &--minus {
+      background-image: url("/img/svg/icon-minus.svg");
+    }
+
+    &--plus {
+      background-image: url("/img/svg/icon-plus.svg");
+    }
 
     &:hover {
       outline: 3px solid #ffffff;
