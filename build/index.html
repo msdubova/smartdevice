@@ -314,7 +314,6 @@
         <div class="footer__block footer__block-contacts">
           <div class="accordeon">
             <div class="footer__title">
-
               <h3>
                 Наш офис
               </h3>
@@ -342,11 +341,11 @@
 
     </div>
   </footer>
-  <div class="modal visually-hidden">
+  <div class="modal modal--hidden">
     <div class="modal__wrapper">
       <div class="modal__overlay"></div>
       <div class="modal__content">
-        <button class="modal__button-close" type="button" aria-label="Закрыть попап">
+        <button class="modal__button-close" type="button" aria-label="Закрыть попап" tabindex="6">
           <svg width="35" height="35">
             <use xlink:href="img/sprite_auto.svg#icon-cross"></use>
           </svg>
@@ -360,21 +359,21 @@
               Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
             </legend>
             <p>
-              <input id="modal-name" name="user-name" type="text" required placeholder="Имя">
+              <input id="modal-name" name="user-name" type="text" required placeholder="Имя" tabindex="1">
               <label for="name" class="visually-hidden">Укажите Ваше имя</label>
             </p>
             <p>
-              <input id="modal-tel" name="user-tel" type="tel" required placeholder="Телефон" minlength="19">
+              <input id="modal-tel" name="user-tel" type="tel" required placeholder="Телефон" minlength="19" tabindex="2">
               <label for="tel" class="visually-hidden">Укажите номер телефона в формате</label>
             </p>
-            <textarea>Ваш вопрос</textarea>
-            <button class="button">
+            <textarea tabindex="3">Ваш вопрос</textarea>
+            <button class="button" tabindex="5">
               Отправить
             </button>
-            <p class="form__agreement">
+            <p class="form__agreement"tabindex="4">
               <input type="checkbox" id="modal-agreement" name="check-agreement" required checked
                 class="visually-hidden">
-              <label for="agreement">
+              <label for="agreement" >
                 Я&nbsp;согласен на&nbsp;обработку персональных данных
               </label>
             </p>

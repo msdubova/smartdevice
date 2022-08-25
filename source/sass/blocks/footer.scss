@@ -6,7 +6,7 @@
       flex-direction: column;
       padding: 50px;
       padding-right: 45px;
-      padding-bottom: 40px;
+      padding-bottom: 60px;
     }
   }
 
@@ -33,10 +33,26 @@
     letter-spacing: 0.05em;
   }
 
+  ul {
+    @include reset-ul;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
-    padding: 50px 30px 10px;
+    padding: 50px 30px 30px;
+  }
+
+  .footer__socials {
+    padding-left: 10px;
+
+    @include vp-1023 {
+      padding-top: 5px;
+    }
+
+    @include vp-767 {
+      padding-top: 0;
+    }
   }
 }
 
@@ -180,8 +196,8 @@ address {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
-  height: 150px;
   padding: 0;
+  height: 150px;
 
   @include vp-1023 {
     height: auto;
@@ -241,16 +257,5 @@ address {
 
     font-size: 14px;
     line-height: 19px;
-  }
-}
-
-.footer__socials {
-  @include vp-1023 {
-    padding-top: 5px;
-  }
-
-  @include vp-767 {
-    margin-left: 5px;
-    padding-top: 0;
   }
 }

@@ -1,4 +1,8 @@
 .modal {
+  &--hidden {
+    display: none;
+  }
+
   position: fixed;
   top: 0;
   right: 0;
@@ -10,10 +14,6 @@
   -webkit-overflow-scrolling: touch;
 
   background-color: rgba($color-default-black, 0.8);
-
-  // transition: opacity $trans-modal,
-  //     transform $trans-modal,
-  //     visibility $trans-modal;
 
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -80,10 +80,6 @@
     svg {
       fill: $color-default-white;
     }
-
-    // &:focus {
-    //   outline: 2px solid $color-default-white
-    // }
 
     &:hover,
     &:focus {

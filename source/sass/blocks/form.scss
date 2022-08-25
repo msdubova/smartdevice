@@ -211,7 +211,7 @@
     position: absolute;
     top: 26%;
     left: 5%;
-    z-index: 10;
+    z-index: 5;
   }
 
   .container {
@@ -254,7 +254,10 @@
 
   input:hover,
   input:focus,
-  input:active {
+  input:active,
+  label:hover,
+  label:focus,
+  label:active {
     outline: 3px solid $color-primary-white;
     outline-offset: 0;
   }
@@ -262,6 +265,13 @@
   textarea:hover,
   textarea:focus,
   textarea:active {
+    outline: 3px solid $color-primary-white;
+    outline-offset: 0;
+  }
+
+  .button:hover,
+  .button:focus,
+  .button:active {
     outline: 3px solid $color-primary-white;
     outline-offset: 0;
   }

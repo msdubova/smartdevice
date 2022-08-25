@@ -69,7 +69,7 @@
   }
 
   .container {
-    padding: 35px 30px 140px 30px;
+    padding: 35px 30px 110px 30px;
   }
 
   h2 {
@@ -86,6 +86,7 @@
 
   ul {
     display: flex;
+    flex-wrap: wrap;
 
     @include reset-ul;
   }
@@ -93,9 +94,10 @@
   li {
     position: relative;
 
-    width: 30%;
+    width: 28.6%;
     height: 650px;
     margin-right: auto;
+    margin-bottom: 30px;
 
     background-color: $color-bg-catalog-item;
 

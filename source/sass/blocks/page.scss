@@ -23,7 +23,6 @@
   &:hover {
     outline: 3px solid $color-primary-white;
     outline-offset: 5px;
-    // outline-color: $color-outline;
     opacity: 0.8;
 
     @include vp-767 {

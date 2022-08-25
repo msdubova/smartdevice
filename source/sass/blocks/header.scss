@@ -39,7 +39,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 100000;
+  z-index: 10;
 
   background: $black-to-right;
 }
@@ -168,8 +168,4 @@
     font-size: 14px;
     line-height: 16px;
   }
-}
-
-.button__name {
-  margin: 0 auto;
 }

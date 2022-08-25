@@ -59,17 +59,35 @@ function controlModal() {
   const overlay = document.querySelector('.modal__overlay');
   const nameInput = document.querySelector('#modal-name');
 
+  // Функция отслеживает клавишу ESCape в режиме открытого модально окна, и закроет его в случае нажатия отслеживаемой клавиши
+
+  function onEscKeydown(evt) {
+    if (evt.key === 'Escape') {
+      evt.preventDefault();
+      closeModal();
+    }
+  }
+
+  // Функция закрывает модальное окно
 
   function closeModal() {
+    closeButton.removeEventListener('click', function () {
+      closeModal();
+    });
+
     overlay.removeEventListener('click', function () {
       closeModal();
     });
-    modalBlock.classList.add('visually-hidden');
+
+    document.removeEventListener('keydown', onEscKeydown);
+    modalBlock.classList.add('modal--hidden');
     body.classList.remove('scroll-lock');
   }
 
+  // Функция открывает модальное окно
+
   function openModal() {
-    modalBlock.classList.remove('visually-hidden');
+    modalBlock.classList.remove('modal--hidden');
     body.classList.add('scroll-lock');
     nameInput.focus();
     closeButton.addEventListener('click', function () {
@@ -79,6 +97,8 @@ function controlModal() {
     overlay.addEventListener('click', function () {
       closeModal();
     });
+
+    document.addEventListener('keydown', onEscKeydown);
   }
 
   callButton.addEventListener('click', function () {
@@ -88,7 +108,7 @@ function controlModal() {
 
 controlModal();
 
-// Маска для ввода номера телефона
+// Функция создает маску на номер телефона в элементе input tel
 
 function maskPhone() {
   const elems = document.querySelectorAll('input[type="tel"]');
