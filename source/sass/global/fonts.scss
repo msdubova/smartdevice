@@ -5,8 +5,8 @@
 
   font-display: swap;
   src:
-    url("../../fonts/pt-mono-v13-latin_cyrillic-regular.woff2") format("woff2"),
-    url("../../fonts/pt-mono-v13-latin_cyrillic-regular.woff") format("woff");
+    url("/fonts/pt-mono-v13-latin_cyrillic-regular.woff2") format("woff2"),
+    url("/fonts/pt-mono-v13-latin_cyrillic-regular.woff") format("woff");
 }
 
 @font-face {
@@ -16,8 +16,8 @@
 
   font-display: swap;
   src:
-    url("../../fonts/roboto-condensed-v25-latin_cyrillic-700.woff2") format("woff2"),
-    url("../../fonts/roboto-condensed-v25-latin_cyrillic-700.woff") format("woff");
+    url("/fonts/roboto-condensed-v25-latin_cyrillic-700.woff2") format("woff2"),
+    url("/fonts/roboto-condensed-v25-latin_cyrillic-700.woff") format("woff");
 }
 
 @font-face {
@@ -27,6 +27,6 @@
 
   font-display: swap;
   src:
-    url("../../fonts/roboto-condensed-v25-latin_cyrillic-regular.woff2") format("woff2"),
-    url("../../fonts/roboto-condensed-v25-latin_cyrillic-regular.woff") format("woff");
+    url("/fonts/roboto-condensed-v25-latin_cyrillic-regular.woff2") format("woff2"),
+    url("/fonts/roboto-condensed-v25-latin_cyrillic-regular.woff") format("woff");
 }

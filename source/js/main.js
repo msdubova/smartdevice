@@ -48,235 +48,198 @@ window.addEventListener('DOMContentLoaded', () => {
 // используйте .closest(el)
 
 
-// Открытие,закрытие модального окна Заказать звонок
+// Открытие,закрытие модального окна "Заказать звонок"
 function controlModal() {
 
-const modalBlock = document.querySelector('.modal');
-const callButton = document.querySelector('.header__button');
-const closeButton = modalBlock.querySelector('.modal__button-close');
-const body = document.querySelector('.page');
-const overlay = document.querySelector('.modal__overlay');
-const nameInput = document.querySelector('#modal-name');
+  const modalBlock = document.querySelector('.modal');
+  const callButton = document.querySelector('.header__button');
+  const closeButton = modalBlock.querySelector('.modal__button-close');
+  const body = document.querySelector('.page');
+  const overlay = document.querySelector('.modal__overlay');
+  const nameInput = document.querySelector('#modal-name');
 
 
-function closeModal () {
-  overlay.removeEventListener('click', function() {
-    closeModal();
-  })
-  modalBlock.classList.add('visually-hidden');
-  body.classList.remove('scroll-lock');
-}
+  function closeModal() {
+    overlay.removeEventListener('click', function () {
+      closeModal();
+    });
+    modalBlock.classList.add('visually-hidden');
+    body.classList.remove('scroll-lock');
+  }
 
-function openModal () {
-  modalBlock.classList.remove('visually-hidden');
-  body.classList.add('scroll-lock');
-  nameInput.focus();
-  closeButton.addEventListener('click', function(){
-    closeModal();
+  function openModal() {
+    modalBlock.classList.remove('visually-hidden');
+    body.classList.add('scroll-lock');
+    nameInput.focus();
+    closeButton.addEventListener('click', function () {
+      closeModal();
+    });
+
+    overlay.addEventListener('click', function () {
+      closeModal();
+    });
+  }
+
+  callButton.addEventListener('click', function () {
+    openModal();
   });
-
-  overlay.addEventListener('click', function(){
-    closeModal();
-  })
-}
-
-
- callButton.addEventListener('click', function (){
-   openModal();
- })
 }
 
 controlModal();
 
-// маска для телефона
+// Маска для ввода номера телефона
 
-  function maskPhone() {
-    const elems = document.querySelectorAll('input[type="tel"]');
+function maskPhone() {
+  const elems = document.querySelectorAll('input[type="tel"]');
 
-    function mask(event) {
-      const keyCode = event.keyCode;
-      const template = '+7 (___) ___-__-__';
-      const def = template.replace(/\D/g, '');
-      const val = event.target.value.replace(/\D/g, '');
+  function mask(event) {
+    const keyCode = event.keyCode;
+    const template = '+7 (___) ___-__-__';
+    const def = template.replace(/\D/g, '');
+    const val = event.target.value.replace(/\D/g, '');
 
-      let i = 0;
-      let newValue = template.replace(/[_\d]/g, function (a) {
-        return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-      });
-      i = newValue.indexOf('_');
-      if (i !== -1) {
-        newValue = newValue.slice(0, i);
-      }
-      let reg = template.substr(0, event.target.value.length).replace(/_+/g,
-          function (a) {
-            return '\\d{1,' + a.length + '}';
-          }).replace(/[+()]/g, '\\$&');
-      reg = new RegExp('^' + reg + '$');
-      if (!reg.test(event.target.value) || event.target.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        event.target.value = newValue;
-      }
-      if (event.type === 'blur' && event.target.value.length < 5) {
-        event.target.value = ' ';
-      }
+    let i = 0;
+    let newValue = template.replace(/[_\d]/g, function (a) {
+      return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+    });
+    i = newValue.indexOf('_');
+    if (i !== -1) {
+      newValue = newValue.slice(0, i);
     }
-
-    for (const elem of elems) {
-      elem.addEventListener('input', mask);
-      elem.addEventListener('focus', mask);
-      elem.addEventListener('blur', mask);
+    let reg = template.substr(0, event.target.value.length).replace(/_+/g,
+        function (a) {
+          return '\\d{1,' + a.length + '}';
+        }).replace(/[+()]/g, '\\$&');
+    reg = new RegExp('^' + reg + '$');
+    if (!reg.test(event.target.value) || event.target.value.length < 5 || keyCode > 47 && keyCode < 58) {
+      event.target.value = newValue;
+    }
+    if (event.type === 'blur' && event.target.value.length < 5) {
+      event.target.value = ' ';
     }
   }
 
-  maskPhone();
+  for (const elem of elems) {
+    elem.addEventListener('input', mask);
+    elem.addEventListener('focus', mask);
+    elem.addEventListener('blur', mask);
+  }
+}
+
+maskPhone();
 
 
-// функция которая отслеживает размер вьюпорта чтоб запустиьт функции на опрелеленный вьюпорт
- function setResize(doIt){
+// Функция которая отслеживает размер вьюпорта чтоб запустить функции, актуальные для разных вьюпортов
+function setResize(doIt) {
 
-  if (window.innerWidth < 768){
+  if (window.innerWidth < 768) {
     doIt();
   } else {
-  window.addEventListener('resize', function() {
-    if (window.innerWidth < 768){
-      doIt();
-    }
-  }, true);
-  }}
-
-
-function setAccordeon () {
-  // if (window.innerWidth < 768){
-    const buttons = document.querySelectorAll('.footer__toggle');
-    const accordeons = document.querySelectorAll('.accordeon__block');
-
-    for (let i = 0; i < accordeons.length; i++) {
-
-      accordeons[i].classList.add('accordeon__block--closed');
+    window.addEventListener('resize', function () {
+      if (window.innerWidth < 768) {
+        doIt();
       }
+    }, true);
+  }
+}
 
+//  Функция открытия закрытия аккордеона в футере
 
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].addEventListener('click', function(){
-        for (let y = 0; y < accordeons.length; y++) {
-          if (y!=i){
-accordeons[y].classList.add('accordeon__block--closed');
-          }
+function setAccordeon() {
 
+  const buttons = document.querySelectorAll('.footer__toggle');
+  const accordeons = document.querySelectorAll('.accordeon__block');
+
+  for (let i = 0; i < accordeons.length; i++) {
+    accordeons[i].classList.add('accordeon__block--closed');
+  }
+
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function () {
+      for (let y = 0; y < accordeons.length; y++) {
+        if (y !== i) {
+          accordeons[y].classList.add('accordeon__block--closed');
         }
-
-          // console.log(accordeons);
-
-
-          // if (accordeons[i].classList.contains('accordeon__block--closed')) {
-
-          //   accordeons[i].classList.remove('accordeon__block--closed');
-
-          // } else {
-          //   accordeons[i].classList.add('accordeon__block--closed');
-          //   // alert('dd')
-          // }
-
-accordeons[i].classList.toggle('accordeon__block--closed');
-// console.log(accordeons);
-
-      })
       }
-    // };
-
-};
-
+      accordeons[i].classList.toggle('accordeon__block--closed');
+    });
+  }
+}
 
 
 setResize(setAccordeon);
-// подробнее о нас
+// Функция открытия закрытия аккордеона по типу "Подробнее" в разделе Aboutus
 
-
-
-
-
-
-
-function setTextAccordeon (){
-const button  = document.querySelector('.aboutus__button');
-const hiddenElements = document.querySelectorAll('.aboutus__hidden');
-const hiddenElementDesktop = document.querySelector('.aboutus__hidden--desktop');
-const hiddenElementMobile = document.querySelector('.aboutus__hidden--mobile');
-for (let y= 0; y < hiddenElements.length; y++) {
-  if( window.innerWidth < 768) {
-     hiddenElements[y].classList.add('visually-hidden');
-} else {
-hiddenElementDesktop.classList.add('visually-hidden')
-}
-};
-
-
-function setResizeRead () {
-
-  window.addEventListener('resize', function() {
-  if (window.innerWidth < 768) {
-
-if (button.innerHTML=="Подробнее") {
-  for(let i= 0; i < hiddenElements.length; i++){
-    hiddenElements[i].classList.add('visually-hidden');
- }
-} else {
-  for(let i= 0; i < hiddenElements.length; i++){
-    hiddenElements[i].classList.remove('visually-hidden');
- }
-}
-
-
-
-  } else {
-if (hiddenElementMobile.classList.contains('visually-hidden')){
-  hiddenElementMobile.classList.remove('visually-hidden')
-}
-    if (button.innerHTML=="Подробнее") {
-      hiddenElementDesktop.classList.add('visually-hidden')
+function setTextAccordeon() {
+  const button = document.querySelector('.aboutus__button');
+  const hiddenElements = document.querySelectorAll('.aboutus__hidden');
+  const hiddenElementDesktop = document.querySelector('.aboutus__hidden--desktop');
+  const hiddenElementMobile = document.querySelector('.aboutus__hidden--mobile');
+  for (let y = 0; y < hiddenElements.length; y++) {
+    if (window.innerWidth < 768) {
+      hiddenElements[y].classList.add('visually-hidden');
     } else {
-      if (hiddenElementDesktop.classList.contains('visually-hidden')) {
-hiddenElementDesktop.classList.remove('visually-hidden')
-}
-
-
+      hiddenElementDesktop.classList.add('visually-hidden');
     }
-
-
- }
-  });
-
-};
-
- function readMore () {
-button.addEventListener('click', function () {
-
-
-
-  if (window.innerWidth < 768) {
-    for(let i= 0; i < hiddenElements.length; i++){
-      hiddenElements[i].classList.toggle('visually-hidden');
-   }} else {
-  hiddenElementDesktop.classList.toggle('visually-hidden')
-   }
-
-
-  if ((hiddenElementDesktop.classList.contains('visually-hidden'))){
-    button.innerHTML="Подробнее";
-  } else {
-     button.innerHTML="Свернуть" ;
   }
 
+  //  Функция отслеживает ищменения ширины вьюпорта, чтоб применить актуальные стили
+
+  function setResizeRead() {
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth < 768) {
+
+        if (button.innerHTML === 'Подробнее') {
+          for (let i = 0; i < hiddenElements.length; i++) {
+            hiddenElements[i].classList.add('visually-hidden');
+          }
+        } else {
+          for (let i = 0; i < hiddenElements.length; i++) {
+            hiddenElements[i].classList.remove('visually-hidden');
+          }
+        }
+      } else {
+        if (hiddenElementMobile.classList.contains('visually-hidden')) {
+          hiddenElementMobile.classList.remove('visually-hidden');
+        }
+        if (button.innerHTML === 'Подробнее') {
+          hiddenElementDesktop.classList.add('visually-hidden');
+        } else {
+          if (hiddenElementDesktop.classList.contains('visually-hidden')) {
+            hiddenElementDesktop.classList.remove('visually-hidden');
+          }
+        }
+      }
+    });
+
+  }
+
+  // Функция выполняет применение акутальных стилей к вьюпорту не отслеживая его изменения. Выполняется при отркытии страницы или обновлении
+
+  function readMore() {
+
+    button.addEventListener('click', function () {
+
+      if (window.innerWidth < 768) {
+        for (let i = 0; i < hiddenElements.length; i++) {
+          hiddenElements[i].classList.toggle('visually-hidden');
+        }
+      } else {
+        hiddenElementDesktop.classList.toggle('visually-hidden');
+      }
+
+      if ((hiddenElementDesktop.classList.contains('visually-hidden'))) {
+        button.innerHTML = 'Подробнее';
+      } else {
+        button.innerHTML = 'Свернуть';
+      }
     }
+    );
+  }
 
-)
- };
-
-setResizeRead();
-readMore();
-};
-
-
-
+  setResizeRead();
+  readMore();
+}
 
 setTextAccordeon();
-

@@ -167,7 +167,7 @@
 
   input[type="checkbox"]:checked + label {
     &::before {
-      background-image: url("../../img/svg/icon-vector.svg");
+      background-image: url("/img/svg/icon-vector.svg");
       background-repeat: no-repeat;
       background-position: center;
       transform: rotate(90deg);
