@@ -106,8 +106,6 @@ function controlModal() {
   });
 }
 
-controlModal();
-
 // Функция создает маску на номер телефона в элементе input tel
 
 function maskPhone() {
@@ -146,8 +144,6 @@ function maskPhone() {
     elem.addEventListener('blur', mask);
   }
 }
-
-maskPhone();
 
 // Функция которая отслеживает размер вьюпорта чтоб запустить функции, актуальные для разных вьюпортов
 
@@ -191,8 +187,6 @@ function setAccordeon() {
     });
   }
 }
-
-setResize(setAccordeon);
 
 // Функция открытия закрытия аккордеона по типу "Подробнее" в разделе Aboutus
 
@@ -268,4 +262,19 @@ function setTextAccordeon() {
   readMore();
 }
 
+// Функция, которая запускает блок в случае, если таковой имеется на странице
+
+function checkBlock(block, doIt) {
+  if (document.body.contains(block)) {
+    doIt();
+  }
+}
+
+// Блоки, удаление которых может привести к ошибкам в консоли
+const modal = document.querySelector('.modal');
+const tel = document.querySelector('input[type="tel"]');
+
+checkBlock(modal, controlModal);
+checkBlock(tel, maskPhone);
+setResize(setAccordeon);
 setTextAccordeon();
