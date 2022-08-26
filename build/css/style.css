@@ -1817,7 +1817,7 @@ button,
     flex-direction: column;
     padding: 50px;
     padding-right: 45px;
-    padding-bottom: 60px;
+    padding-bottom: 55px;
   }
 
   .footer .footer__socials {
@@ -1908,7 +1908,7 @@ button,
   }
 
   .header__sticker .header__container {
-    padding: 10px 27px 20px 26px;
+    padding: 10px 20px 20px 26px;
   }
 
   .header__logo {
