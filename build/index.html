@@ -34,7 +34,7 @@
               </a>
             </li>
             <li>
-              <a href="tel:+7(495)0005252" aria-label="Позвонить в  интернет-магазин Smart-Device">
+              <a href="tel:+74950005252" aria-label="Позвонить в  интернет-магазин Smart-Device">
                 <svg width="40" height="40" role="img" aria-label="Изображение конверта">
                   <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
                 </svg>
@@ -45,7 +45,7 @@
             </li>
           </ul>
         </nav>
-        <button class="header__button button">
+        <button class="header__button button" type="button">
           Заказать звонок
         </button>
       </div>
@@ -59,10 +59,8 @@
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
         <a href="#application" class="button">
-
           <span class="button__name button__name--desktop"> Получить бесплатную консультацию</span>
           <span class="button__name button__name--mobile">Бесплатная консультация</span>
-
         </a>
       </div>
     </section>
@@ -145,7 +143,7 @@
           Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании.
           Использование инновационных технологий помогает экономить деньги и время наших клиентов
         </p>
-        <button class="aboutus__button button">Подробнее</button>
+        <button class="aboutus__button button" type="button">Подробнее</button>
       </div>
     </section>
     <section class="catalog">
@@ -156,7 +154,7 @@
             Smart&nbsp;Device</span>
         </h2>
         <ul>
-          <li class="catalog__item catalog__item-production">
+          <li class="catalog__item catalog__item--production">
             <a href="#">
               <h3>
                 Производство печатных&nbsp;
@@ -164,14 +162,14 @@
               </h3>
             </a>
           </li>
-          <li class="catalog__item catalog__item-installation">
+          <li class="catalog__item catalog__item--installation">
             <a href="#">
               <h3>
                 Монтаж печатных&nbsp;плат
               </h3>
             </a>
           </li>
-          <li class="catalog__item catalog__item-details">
+          <li class="catalog__item catalog__item--details">
             <a href="#">
               <h3>
                 Комплектующие
@@ -188,9 +186,12 @@
       <div class="container">
         <div class="form__img">
           <picture>
+            <source type="image/webp" srcset="img/img-form-plane-desktop-2x.webp 2x,
+            img/img-form-plane-desktop-1x.webp 1x">
+
             <!-- 1x: 510px; 2x: 1020px -->
-            <img width="510" height="285" srcset="img/img-form-plane-desktop-2x.webp 2x"
-              src="img/img-form-plane-desktop-1x.webp" alt="Изображение самолета" loading="lazy">
+            <img width="510" height="285" srcset="img/img-form-plane-desktop-2x.png 2x"
+              src="img/img-form-plane-desktop-1x.png" alt="Изображение самолета" loading="lazy">
           </picture>
         </div>
 
@@ -212,13 +213,12 @@
                 minlength="19">
                 <label for="tel" class="visually-hidden">Укажите номер телефона в формате</label>
               </p>
-              <textarea>Ваш вопрос
-              </textarea>
-              <button class="button">
+              <textarea placeholder="Ваш вопрос"></textarea>
+              <button class="button" type="submit">
                 Задать вопрос
               </button>
               <p class="form__agreement">
-                <input type="checkbox" id="agreement" name="check-agreement" required checked class="visually-hidden">
+                <input type="checkbox" id="agreement" name="check-agreement" required checked>
                 <label for="agreement">
                   Я&nbsp;согласен на&nbsp;обработку персональных данных
                 </label>
@@ -262,13 +262,13 @@
         </ul>
       </div>
       <div class="footer__nav">
-        <div class="footer__block footer__block-nav">
+        <div class="footer__block footer__block--nav">
           <div class="accordeon">
             <div class="footer__title">
               <h3>
                 Разделы сайта
               </h3>
-              <button class="footer__toggle footer__toggle--plus">
+              <button class="footer__toggle footer__toggle--plus" type="button">
                 <span class="visually-hidden">Подробнее</span>
               </button>
             </div>
@@ -317,7 +317,7 @@
               <h3>
                 Наш офис
               </h3>
-              <button class="footer__toggle footer__toggle--plus">
+              <button class="footer__toggle footer__toggle--plus" type="button">
                 <span class="visually-hidden">Подробнее</span>
               </button>
             </div>
@@ -325,13 +325,13 @@
               <address>
                 г. Мытищи, Олимпийский проспект, д.10
               </address>
-              <a href="tel:+7(495)589-40-50" aria-label="Номер телефона офиса продаж">
+              <a href="tel:+74955894050" aria-label="Номер телефона офиса продаж">
                 +7 (495) 589-40-50
               </a>
-              <a href="tel:+7(925)389-58-29" aria-label="Номер телефона офиса продаж">
+              <a href="tel:+79253895829" aria-label="Номер телефона офиса продаж">
                 +7 (925) 389-58-29
               </a>
-              <a href="tel:+7(925)364-78-13" aria-label="Номер телефона офиса продаж">
+              <a href="tel:+79253647813" aria-label="Номер телефона офиса продаж">
                 +7 (925) 364-78-13
               </a>
             </div>
@@ -350,7 +350,7 @@
             <use xlink:href="img/sprite_auto.svg#icon-cross"></use>
           </svg>
         </button>
-        <form class="form form_modal" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="form form--modal" action="https://echo.htmlacademy.ru/" method="post">
           <h2>
             Закажите звонок
           </h2>
@@ -366,13 +366,12 @@
               <input id="modal-tel" name="user-tel" type="tel" required placeholder="Телефон" minlength="19" tabindex="2">
               <label for="tel" class="visually-hidden">Укажите номер телефона в формате</label>
             </p>
-            <textarea tabindex="3">Ваш вопрос</textarea>
-            <button class="button" tabindex="5">
+            <textarea tabindex="3" placeholder="Ваш вопрос"></textarea>
+            <button class="button" tabindex="5" type="submit">
               Отправить
             </button>
-            <p class="form__agreement"tabindex="4">
-              <input type="checkbox" id="modal-agreement" name="check-agreement" required checked
-                class="visually-hidden">
+            <p class="form__agreement" tabindex="4">
+              <input type="checkbox" id="modal-agreement" name="check-agreement" required checked>
               <label for="agreement" >
                 Я&nbsp;согласен на&nbsp;обработку персональных данных
               </label>

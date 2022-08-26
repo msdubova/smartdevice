@@ -185,7 +185,7 @@
   background-color: $color-bg-catalog-item;
   background-size: cover;
 
-  &-production {
+  &--production {
     background-image: url("../../img/bg-card-production-desktop-1x.webp");
 
     @include retina () {
@@ -209,7 +209,7 @@
     }
   }
 
-  &-installation {
+  &--installation {
     background-image: url("../../img/bg-card-installation-desktop-1x.webp");
 
     @include retina () {
@@ -233,7 +233,7 @@
     }
   }
 
-  &-details {
+  &--details {
     background-image: url("../../img/bg-card-details-desktop-1x.webp");
 
     @include retina () {

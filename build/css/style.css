@@ -685,7 +685,7 @@ button,
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  font-family: "PT Mono", "Times New Roman", serif;
+  font-family: "PT Mono", "Courier", monospace;
   text-align: left;
   letter-spacing: 0;
   scroll-behavior: smooth;
@@ -1059,15 +1059,15 @@ button,
   background-size: cover;
 }
 
-.catalog__item-production {
+.catalog__item--production {
   background-image: url("../../img/bg-card-production-desktop-1x.webp");
 }
 
-.catalog__item-installation {
+.catalog__item--installation {
   background-image: url("../../img/bg-card-installation-desktop-1x.webp");
 }
 
-.catalog__item-details {
+.catalog__item--details {
   background-image: url("../../img/bg-card-details-desktop-1x.webp");
 }
 
@@ -1173,6 +1173,20 @@ button,
   color: #ffffff;
 }
 
+.form input[type="checkbox"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
 .form input[type="checkbox"]:checked + label::before {
   background-image: url("/img/svg/icon-vector.svg");
   background-repeat: no-repeat;
@@ -1257,34 +1271,34 @@ button,
   border: none;
 }
 
-.form_modal {
+.form--modal {
   min-height: auto;
 }
 
-.form_modal::before {
+.form--modal::before {
   display: none;
 }
 
-.form_modal input:hover,
-.form_modal input:focus,
-.form_modal input:active,
-.form_modal label:hover,
-.form_modal label:focus,
-.form_modal label:active {
+.form--modal input:hover,
+.form--modal input:focus,
+.form--modal input:active,
+.form--modal label:hover,
+.form--modal label:focus,
+.form--modal label:active {
   outline: 3px solid #f2f5f6;
   outline-offset: 0;
 }
 
-.form_modal textarea:hover,
-.form_modal textarea:focus,
-.form_modal textarea:active {
+.form--modal textarea:hover,
+.form--modal textarea:focus,
+.form--modal textarea:active {
   outline: 3px solid #f2f5f6;
   outline-offset: 0;
 }
 
-.form_modal .button:hover,
-.form_modal .button:focus,
-.form_modal .button:active {
+.form--modal .button:hover,
+.form--modal .button:focus,
+.form--modal .button:active {
   outline: 3px solid #f2f5f6;
   outline-offset: 0;
 }
@@ -1354,8 +1368,7 @@ button,
   margin-right: auto;
 }
 
-.footer a,
-address {
+.footer a {
   color: #e5e5e5;
 }
 
@@ -1383,11 +1396,11 @@ address {
   cursor: pointer;
 }
 
-.footer__block-nav {
+.footer__block--nav {
   width: 70%;
 }
 
-.footer__block-nav ul {
+.footer__block--nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1399,15 +1412,15 @@ address {
   flex-wrap: wrap;
   -ms-flex-line-pack: justify;
   align-content: space-between;
-  padding: 0;
   height: 150px;
+  padding: 0;
 }
 
 .footer__block li {
   width: 48%;
 }
 
-.footer__block-nav a {
+.footer__block--nav a {
   display: block;
   padding: 3px 0 4px;
 }
@@ -1420,6 +1433,8 @@ address {
 .footer address {
   margin: 23px 0 8px;
   font-style: normal;
+  color: #ffffff;
+  opacity: 0.7;
 }
 
 .socials {
@@ -1725,15 +1740,15 @@ address {
     margin-bottom: 38px;
   }
 
-  .catalog__item-production {
+  .catalog__item--production {
     background-image: url("../../img/bg-card-production-tablet-1x.webp");
   }
 
-  .catalog__item-installation {
+  .catalog__item--installation {
     background-image: url("../../img/bg-card-installation-tablet-1x.webp");
   }
 
-  .catalog__item-details {
+  .catalog__item--details {
     background-image: url("../../img/bg-card-details-tablet-1x.webp");
   }
 
@@ -1818,11 +1833,11 @@ address {
     padding: 7px 0;
   }
 
-  .footer__block-nav {
+  .footer__block--nav {
     width: 54%;
   }
 
-  .footer__block-nav ul {
+  .footer__block--nav ul {
     height: auto;
   }
 
@@ -1845,15 +1860,15 @@ address {
     background-image: url("../../img/bg-aboutus-tablet-2x.webp");
   }
 
-  .catalog__item-production {
+  .catalog__item--production {
     background-image: url("../../img/bg-card-production-tablet-2x.webp");
   }
 
-  .catalog__item-installation {
+  .catalog__item--installation {
     background-image: url("../../img/bg-card-installation-tablet-2x.webp");
   }
 
-  .catalog__item-details {
+  .catalog__item--details {
     background-image: url("../../img/bg-card-details-tablet-2x.webp");
   }
 }
@@ -2034,15 +2049,15 @@ address {
     display: block;
   }
 
-  .catalog__item-production {
+  .catalog__item--production {
     background-image: url("../../img/bg-card-production-mobile-1x.webp");
   }
 
-  .catalog__item-installation {
+  .catalog__item--installation {
     background-image: url("../../img/bg-card-installation-mobile-1x.webp");
   }
 
-  .catalog__item-details {
+  .catalog__item--details {
     background-image: url("../../img/bg-card-details-mobile-1x.webp");
   }
 
@@ -2119,8 +2134,7 @@ address {
     padding-right: 8px;
   }
 
-  .footer a,
-  address {
+  .footer a {
     font-size: 14px;
     line-height: 19px;
     color: #ffffff;
@@ -2184,7 +2198,7 @@ address {
     outline-offset: 5px;
   }
 
-  .footer__block-nav {
+  .footer__block--nav {
     width: 100%;
   }
 
@@ -2225,7 +2239,7 @@ address {
     margin-left: 0;
   }
 
-  .footer .accordeon__block--closed {
+  .accordeon__block--closed {
     display: none;
   }
 
@@ -2240,15 +2254,15 @@ address {
     background-image: url("/img/bg-intro-mobile-2x.webp");
   }
 
-  .catalog__item-production {
+  .catalog__item--production {
     background-image: url("../../img/bg-card-production-mobile-2x.webp");
   }
 
-  .catalog__item-installation {
+  .catalog__item--installation {
     background-image: url("../../img/bg-card-installation-mobile-2x.webp");
   }
 
-  .catalog__item-details {
+  .catalog__item--details {
     background-image: url("../../img/bg-card-details-mobile-2x.webp");
   }
 }
@@ -2262,15 +2276,15 @@ address {
     background-image: url("../../img/bg-aboutus-desktop-2x.webp");
   }
 
-  .catalog__item-production {
+  .catalog__item--production {
     background-image: url("../../img/bg-card-production-desktop-2x.webp");
   }
 
-  .catalog__item-installation {
+  .catalog__item--installation {
     background-image: url("../../img/bg-card-installation-desktop-2x.webp");
   }
 
-  .catalog__item-details {
+  .catalog__item--details {
     background-image: url("../../img/bg-card-details-desktop-2x.webp");
   }
 }

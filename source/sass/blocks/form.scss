@@ -165,6 +165,10 @@
     }
   }
 
+  input[type="checkbox"] {
+    @include visually-hidden;
+  }
+
   input[type="checkbox"]:checked + label {
     &::before {
       background-image: url("/img/svg/icon-vector.svg");
@@ -245,7 +249,7 @@
   }
 }
 
-.form_modal {
+.form--modal {
   min-height: auto;
 
   &::before {

@@ -84,14 +84,14 @@
   }
 }
 
-.footer a,
-address {
+.footer a {
   color: $color-default-white;
 
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
     color: $color-secondary-white;
+
     opacity: 0.7;
   }
 }
@@ -128,8 +128,6 @@ address {
       position: absolute;
       top: 3px;
       left: -25px;
-      // width: 2000vh;
-
       width: calc(100% + 53px);
       height: 1px;
 
@@ -149,6 +147,7 @@ address {
 
 .footer__toggle {
   display: none;
+
   cursor: pointer;
 
   @include vp-767 {
@@ -179,7 +178,7 @@ address {
   }
 }
 
-.footer__block-nav {
+.footer__block--nav {
   width: 70%;
 
   @include vp-1023 {
@@ -191,13 +190,13 @@ address {
   }
 }
 
-.footer__block-nav ul {
+.footer__block--nav ul {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-between;
-  padding: 0;
   height: 150px;
+  padding: 0;
 
   @include vp-1023 {
     height: auto;
@@ -232,7 +231,7 @@ address {
   }
 }
 
-.footer__block-nav a {
+.footer__block--nav a {
   display: block;
   padding: 3px 0 4px;
 }
@@ -250,6 +249,9 @@ address {
   margin: 23px 0 8px;
 
   font-style: normal;
+  color: $color-secondary-white;
+
+  opacity: 0.7;
 
   @include vp-767 {
     margin-top: 7px;
