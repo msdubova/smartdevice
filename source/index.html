@@ -19,9 +19,12 @@
   <header class="header">
     <h1 class="visually-hidden"> Интернет-магазин печатных плат Smart-Device </h1>
     <div class="header__sticker">
-      <div class="container">
+      <div class="header__container container">
         <a class="header__logo">
-          <span class="visually-hidden">Логотип интернет-магазина Smart-Device</span>
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg" width="35" height="35">
+            <img src="img/svg/logo-full.svg" width="215" height="55" alt="Интернет-магазин печатных плат Smart-Device">
+          </picture>
         </a>
         <nav class="header__nav nav">
           <ul>
@@ -51,14 +54,14 @@
       </div>
     </div>
     <section class="header__intro">
-      <div class="container">
+      <div class="header__container container">
         <h2>
           Печатные платы
         </h2>
         <p>
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
-        <a href="#application" class="button">
+        <a href="#application" class="header__button button">
           <span class="button__name button__name--desktop"> Получить бесплатную консультацию</span>
           <span class="button__name button__name--mobile">Бесплатная консультация</span>
         </a>
@@ -67,7 +70,7 @@
   </header>
   <main>
     <section class="advantages">
-      <div class="container">
+      <div class="advantages__container container">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul>
           <li>
@@ -122,8 +125,8 @@
         </ul>
       </div>
     </section>
-    <section class="aboutus ">
-      <div class="container">
+    <section class="aboutus">
+      <div class="aboutus__container container">
         <h2>О компании</h2>
         <p>
           Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
@@ -147,7 +150,7 @@
       </div>
     </section>
     <section class="catalog">
-      <div class="container">
+      <div class="catalog__container container">
         <h2>
           <span class="catalog__name catalog__name--desktop">Smart Device предлагает следующие товары и услуги</span>
           <span class="catalog__name catalog__name--mobile">Товары и услуги
@@ -183,7 +186,7 @@
       </div>
     </section>
     <section class="form" id="application">
-      <div class="container">
+      <div class="form__container">
         <div class="form__img">
           <picture>
             <source type="image/webp" srcset="img/img-form-plane-desktop-2x.webp 2x,
@@ -214,7 +217,7 @@
                 <label for="tel" class="visually-hidden">Укажите номер телефона в формате</label>
               </p>
               <textarea placeholder="Ваш вопрос"></textarea>
-              <button class="button" type="submit">
+              <button class="form__button button" type="submit">
                 Задать вопрос
               </button>
               <p class="form__agreement">
@@ -230,7 +233,7 @@
     </section>
   </main>
   <footer class="footer">
-    <div class="container">
+    <div class="footer__container container">
       <div class="footer__links">
         <a class="footer__logo">
           <svg width="215" height="55" role="img" aria-label="Логотип интернет-магазина Smart-Device">
@@ -311,7 +314,7 @@
             </ul>
           </div>
         </div>
-        <div class="footer__block footer__block-contacts">
+        <div class="footer__block footer__block--contacts">
           <div class="accordeon">
             <div class="footer__title">
               <h3>
@@ -345,7 +348,7 @@
     <div class="modal__wrapper">
       <div class="modal__overlay"></div>
       <div class="modal__content">
-        <button class="modal__button-close" type="button" aria-label="Закрыть попап" tabindex="6">
+        <button class="modal__button--close" type="button" aria-label="Закрыть попап" tabindex="6">
           <svg width="35" height="35">
             <use xlink:href="img/sprite_auto.svg#icon-cross"></use>
           </svg>
@@ -367,7 +370,7 @@
               <label for="tel" class="visually-hidden">Укажите номер телефона в формате</label>
             </p>
             <textarea tabindex="3" placeholder="Ваш вопрос"></textarea>
-            <button class="button" tabindex="5" type="submit">
+            <button class="modal__button form__button button" tabindex="5" type="submit">
               Отправить
             </button>
             <p class="form__agreement" tabindex="4">

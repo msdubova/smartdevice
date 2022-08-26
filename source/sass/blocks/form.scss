@@ -22,7 +22,7 @@
       padding: 32px 11px;
     }
 
-    .container {
+    .form__container {
       padding: 45px 50px;
     }
 
@@ -37,13 +37,13 @@
       margin-bottom: 7px;
     }
 
-    .button {
+    .form__button {
       width: 265px;
     }
   }
 
   @include vp-767 {
-    .button {
+    .form__button {
       width: 100%;
       margin-bottom: 18px;
     }
@@ -75,7 +75,7 @@
       line-height: 19px;
     }
 
-    .container {
+    .form__container {
       padding: 48px 25px 67px 25px;
     }
 
@@ -147,6 +147,10 @@
       outline: auto;
       outline-offset: 5px;
     }
+
+    &::placeholder {
+      color: $color-secondary-white;
+    }
   }
 
   input {
@@ -171,7 +175,7 @@
 
   input[type="checkbox"]:checked + label {
     &::before {
-      background-image: url("/img/svg/icon-vector.svg");
+      background-image: url("../img/svg/icon-vector.svg");
       background-repeat: no-repeat;
       background-position: center;
       transform: rotate(90deg);
@@ -218,7 +222,7 @@
     z-index: 5;
   }
 
-  .container {
+  .form__container {
     display: flex;
     justify-content: flex-start;
     padding: 110px 0;
@@ -232,7 +236,7 @@
     text-align: left;
   }
 
-  .button {
+  .form__button {
     display: inline-block;
     align-self: center;
     width: 45.5%;

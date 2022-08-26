@@ -389,7 +389,7 @@ template {
   font-weight: 400;
   font-family: "PT Mono";
   font-display: swap;
-  src: url("/fonts/pt-mono-v13-latin_cyrillic-regular.woff2") format("woff2"), url("/fonts/pt-mono-v13-latin_cyrillic-regular.woff") format("woff");
+  src: url("../fonts/pt-mono-v13-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/pt-mono-v13-latin_cyrillic-regular.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("/fonts/roboto-condensed-v25-latin_cyrillic-700.woff2") format("woff2"), url("/fonts/roboto-condensed-v25-latin_cyrillic-700.woff") format("woff");
+  src: url("../fonts/roboto-condensed-v25-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-condensed-v25-latin_cyrillic-700.woff") format("woff");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed";
   font-display: swap;
-  src: url("/fonts/roboto-condensed-v25-latin_cyrillic-regular.woff2") format("woff2"), url("/fonts/roboto-condensed-v25-latin_cyrillic-regular.woff") format("woff");
+  src: url("../fonts/roboto-condensed-v25-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-v25-latin_cyrillic-regular.woff") format("woff");
 }
 
 *,
@@ -662,11 +662,6 @@ button,
   pointer-events: none;
 }
 
-.button * {
-  font-weight: inherit;
-  font-family: inherit;
-}
-
 .button__name {
   margin: 0 auto;
 }
@@ -738,7 +733,7 @@ button,
   margin-bottom: 85px;
   color: #f2f5f6;
   background-color: #041827;
-  background-image: url("/img/bg-intro-desktop-1x.webp");
+  background-image: url("../img/bg-intro-desktop-1x.webp");
   background-size: cover;
 }
 
@@ -752,7 +747,7 @@ button,
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
 }
 
-.header__sticker .container {
+.header__sticker .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -769,15 +764,14 @@ button,
 .header__logo {
   width: 215px;
   height: 55px;
-  background-image: url("/img/svg/logo-full.svg");
   pointer-events: none;
 }
 
-.header__sticker .button {
+.header__sticker .header__button {
   margin: 5px 0;
 }
 
-.header__intro .container {
+.header__intro .header__container {
   padding: 280px  50px 50px 155px;
 }
 
@@ -797,7 +791,7 @@ button,
   line-height: 34px;
 }
 
-.header__intro .button {
+.header__intro .header__button {
   padding: 17px 27px;
   font-size: 18px;
   line-height: 21.09px;
@@ -856,7 +850,7 @@ button,
   vertical-align: middle;
 }
 
-.advantages .container {
+.advantages .advantages__container {
   padding: 30px;
 }
 
@@ -894,12 +888,13 @@ button,
   border-color: #00b2ff;
 }
 
-.advantages li:hover * {
+.advantages li:hover h3,
+.advantages li:hover p {
   color: #f2f5f6;
 }
 
 .advantages li:hover svg {
-  fill: #e5e5e5;
+  fill: #f2f5f6;
 }
 
 .advantages svg {
@@ -925,7 +920,7 @@ button,
   margin-bottom: 51px;
 }
 
-.aboutus .button {
+.aboutus .aboutus__button {
   margin-top: 20px;
   margin-bottom: 5px;
   padding: 15px 50px 12px;
@@ -933,24 +928,24 @@ button,
   border-color: #00b2ff;
 }
 
-.aboutus .button:hover,
-.aboutus .button:focus {
+.aboutus .aboutus__button:hover,
+.aboutus .aboutus__button:focus {
   outline-color: #00b2ff;
 }
 
-.aboutus .container {
+.aboutus .aboutus__container {
   position: relative;
   padding: 30px 30px 64px 280px;
 }
 
-.aboutus .container::before {
+.aboutus .aboutus__container::before {
   content: "";
   position: absolute;
   top: 60px;
   left: 30px;
   width: 150px;
   height: 320px;
-  background-image: url("/img/bg-aboutus-desktop-1x.webp");
+  background-image: url("../img/bg-aboutus-desktop-1x.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -970,19 +965,17 @@ button,
   background-color: #041827;
 }
 
-.catalog * {
-  color: #ffffff;
-}
-
-.catalog .container {
+.catalog .catalog__container {
   padding: 35px 30px 110px 30px;
 }
 
 .catalog h2 {
   margin-top: 30px;
+  color: #ffffff;
 }
 
 .catalog h3 {
+  color: #ffffff;
   margin: 0;
   padding: 0;
   font-size: 20px;
@@ -1037,7 +1030,7 @@ button,
   width: 60px;
   height: 60px;
   background-color: #00b2ff;
-  background-image: url("../../img/svg/icon-vector.svg");
+  background-image: url("../img/svg/icon-vector.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1060,15 +1053,15 @@ button,
 }
 
 .catalog__item--production {
-  background-image: url("../../img/bg-card-production-desktop-1x.webp");
+  background-image: url("../img/bg-card-production-desktop-1x.webp");
 }
 
 .catalog__item--installation {
-  background-image: url("../../img/bg-card-installation-desktop-1x.webp");
+  background-image: url("../img/bg-card-installation-desktop-1x.webp");
 }
 
 .catalog__item--details {
-  background-image: url("../../img/bg-card-details-desktop-1x.webp");
+  background-image: url("../img/bg-card-details-desktop-1x.webp");
 }
 
 .form {
@@ -1133,6 +1126,26 @@ button,
   outline-offset: 5px;
 }
 
+.form textarea::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form textarea::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form textarea:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form textarea::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form textarea::placeholder {
+  color: #ffffff;
+}
+
 .form input {
   width: 100%;
   padding: 15px;
@@ -1188,7 +1201,7 @@ button,
 }
 
 .form input[type="checkbox"]:checked + label::before {
-  background-image: url("/img/svg/icon-vector.svg");
+  background-image: url("../img/svg/icon-vector.svg");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transform: rotate(90deg);
@@ -1238,7 +1251,7 @@ button,
   z-index: 5;
 }
 
-.form .container {
+.form .form__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1255,7 +1268,7 @@ button,
   text-align: left;
 }
 
-.form .button {
+.form .form__button {
   display: inline-block;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -1344,7 +1357,7 @@ button,
   list-style: none;
 }
 
-.footer .container {
+.footer .footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1425,7 +1438,7 @@ button,
   padding: 3px 0 4px;
 }
 
-.footer__block-contacts a {
+.footer__block--contacts a {
   display: block;
   margin-bottom: 7px;
 }
@@ -1514,7 +1527,7 @@ button,
   border-radius: 3px;
 }
 
-.modal__button-close {
+.modal__button--close {
   position: absolute;
   top: 16px;
   right: 14px;
@@ -1527,16 +1540,16 @@ button,
   cursor: pointer;
 }
 
-.modal__button-close svg {
+.modal__button--close svg {
   fill: #e5e5e5;
 }
 
-.modal__button-close:hover,
-.modal__button-close:focus {
+.modal__button--close:hover,
+.modal__button--close:focus {
   opacity: 0.6;
 }
 
-.modal__button-close:disabled {
+.modal__button--close:disabled {
   opacity: 0.2;
 }
 
@@ -1579,12 +1592,12 @@ button,
   outline-offset: 0;
 }
 
-.modal .button {
+.modal .modal__button {
   width: 100%;
   margin-bottom: 8px;
 }
 
-.modal .button:hover {
+.modal .modal__button:hover {
   outline-offset: 0;
 }
 
@@ -1615,18 +1628,18 @@ button,
   .header {
     min-height: 640px;
     margin-bottom: 65px;
-    background-image: url("/img/bg-intro-tablet-1x.webp");
+    background-image: url("../img/bg-intro-tablet-1x.webp");
   }
 
-  .header__sticker .container {
+  .header__sticker .header__container {
     padding: 20px 70px 25px 50px;
   }
 
-  .header__sticker .button {
+  .header__sticker .header__button {
     display: none;
   }
 
-  .header__intro .container {
+  .header__intro .header__container {
     padding: 148px 50px 25px;
   }
 
@@ -1641,7 +1654,7 @@ button,
     margin-bottom: 47px;
   }
 
-  .header__intro .button {
+  .header__intro .header__button {
     margin-left: 45px;
   }
 
@@ -1684,15 +1697,15 @@ button,
     padding: 40px 45px 13px 40px;
   }
 
-  .advantages .container {
+  .advantages .advantages__container {
     padding: 15px 50px;
   }
 
-  .aboutus .button {
+  .aboutus .aboutus__button {
     margin-top: -5px;
   }
 
-  .aboutus .container {
+  .aboutus .aboutus__container {
     padding: 0 50px 25px 224px;
   }
 
@@ -1700,10 +1713,10 @@ button,
     line-height: 21.9px;
   }
 
-  .aboutus .container::before {
+  .aboutus .aboutus__container::before {
     top: 5px;
     left: 45px;
-    background-image: url("../../img/bg-aboutus-tablet-1x.webp");
+    background-image: url("../img/bg-aboutus-tablet-1x.webp");
   }
 
   .catalog ul {
@@ -1713,12 +1726,8 @@ button,
     flex-direction: column;
   }
 
-  .catalog .container {
+  .catalog .catalog__container {
     padding: 25px 50px 45px 50px;
-  }
-
-  .catalog .catalog {
-    margin-bottom: 39px;
   }
 
   .catalog h3 {
@@ -1741,15 +1750,15 @@ button,
   }
 
   .catalog__item--production {
-    background-image: url("../../img/bg-card-production-tablet-1x.webp");
+    background-image: url("../img/bg-card-production-tablet-1x.webp");
   }
 
   .catalog__item--installation {
-    background-image: url("../../img/bg-card-installation-tablet-1x.webp");
+    background-image: url("../img/bg-card-installation-tablet-1x.webp");
   }
 
   .catalog__item--details {
-    background-image: url("../../img/bg-card-details-tablet-1x.webp");
+    background-image: url("../img/bg-card-details-tablet-1x.webp");
   }
 
   .form {
@@ -1769,7 +1778,7 @@ button,
     padding: 32px 11px;
   }
 
-  .form .container {
+  .form .form__container {
     padding: 45px 50px;
   }
 
@@ -1784,7 +1793,7 @@ button,
     margin-bottom: 7px;
   }
 
-  .form .button {
+  .form .form__button {
     width: 265px;
   }
 
@@ -1801,7 +1810,7 @@ button,
     padding-left: 3px;
   }
 
-  .footer .container {
+  .footer .footer__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1853,23 +1862,23 @@ button,
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("/img/bg-intro-tablet-2x.webp");
+    background-image: url("../img/bg-intro-tablet-2x.webp");
   }
 
-  .aboutus .container::before {
-    background-image: url("../../img/bg-aboutus-tablet-2x.webp");
+  .aboutus .aboutus__container::before {
+    background-image: url("../img/bg-aboutus-tablet-2x.webp");
   }
 
   .catalog__item--production {
-    background-image: url("../../img/bg-card-production-tablet-2x.webp");
+    background-image: url("../img/bg-card-production-tablet-2x.webp");
   }
 
   .catalog__item--installation {
-    background-image: url("../../img/bg-card-installation-tablet-2x.webp");
+    background-image: url("../img/bg-card-installation-tablet-2x.webp");
   }
 
   .catalog__item--details {
-    background-image: url("../../img/bg-card-details-tablet-2x.webp");
+    background-image: url("../img/bg-card-details-tablet-2x.webp");
   }
 }
 
@@ -1895,10 +1904,10 @@ button,
   .header {
     min-height: 560px;
     margin-bottom: 45px;
-    background-image: url("/img/bg-intro-mobile-1x.webp");
+    background-image: url("../img/bg-intro-mobile-1x.webp");
   }
 
-  .header__sticker .container {
+  .header__sticker .header__container {
     padding: 10px 27px 20px 26px;
   }
 
@@ -1906,10 +1915,9 @@ button,
     width: 35px;
     height: 35px;
     margin-top: 5px;
-    background-image: url("/img/svg/logo-mobile.svg");
   }
 
-  .header__intro .container {
+  .header__intro .header__container {
     padding: 120px 25px 25px;
   }
 
@@ -1926,7 +1934,7 @@ button,
     line-height: 22px;
   }
 
-  .header__intro .button {
+  .header__intro .header__button {
     width: 100%;
     max-width: 300px;
     margin-left: 0;
@@ -1963,7 +1971,7 @@ button,
     margin-bottom: 0;
   }
 
-  .advantages .container {
+  .advantages .advantages__container {
     padding: 5px 25px;
   }
 
@@ -1972,7 +1980,7 @@ button,
     height: 30px;
   }
 
-  .aboutus .button {
+  .aboutus .aboutus__button {
     display: block;
     width: 59.1%;
     margin-bottom: 3px;
@@ -1980,7 +1988,7 @@ button,
     text-align: center;
   }
 
-  .aboutus .container {
+  .aboutus .aboutus__container {
     padding: 25px;
   }
 
@@ -1998,18 +2006,12 @@ button,
     color: #041827;
   }
 
-  .aboutus .container::before {
+  .aboutus .aboutus__container::before {
     display: none;
   }
 
-  .catalog .container {
+  .catalog .catalog__container {
     padding: 25px 25px 86px 25px;
-  }
-
-  .catalog .catalog {
-    margin-bottom: 30px;
-    font-size: 28px;
-    line-height: 39px;
   }
 
   .catalog h2 {
@@ -2050,18 +2052,18 @@ button,
   }
 
   .catalog__item--production {
-    background-image: url("../../img/bg-card-production-mobile-1x.webp");
+    background-image: url("../img/bg-card-production-mobile-1x.webp");
   }
 
   .catalog__item--installation {
-    background-image: url("../../img/bg-card-installation-mobile-1x.webp");
+    background-image: url("../img/bg-card-installation-mobile-1x.webp");
   }
 
   .catalog__item--details {
-    background-image: url("../../img/bg-card-details-mobile-1x.webp");
+    background-image: url("../img/bg-card-details-mobile-1x.webp");
   }
 
-  .form .button {
+  .form .form__button {
     width: 100%;
     margin-bottom: 18px;
   }
@@ -2092,7 +2094,7 @@ button,
     line-height: 19px;
   }
 
-  .form .container {
+  .form .form__container {
     padding: 48px 25px 67px 25px;
   }
 
@@ -2105,7 +2107,7 @@ button,
     padding-left: 10px;
   }
 
-  .footer .container {
+  .footer .footer__container {
     padding: 35px 20px 35px 25px;
   }
 
@@ -2158,7 +2160,7 @@ button,
     position: absolute;
     top: 3px;
     left: -25px;
-    width: calc(100% + 53px);
+    width: calc(100% + 45px);
     height: 1px;
     background-color: rgba(248, 253, 255, 0.7);
   }
@@ -2179,18 +2181,18 @@ button,
     margin-top: 10px;
     padding: 15px;
     background: none;
-    background-image: url("/img/svg/icon-plus.svg");
+    background-image: url("../img/svg/icon-plus.svg");
     background-repeat: no-repeat;
     background-position: center;
     border: none;
   }
 
   .footer__toggle--minus {
-    background-image: url("/img/svg/icon-minus.svg");
+    background-image: url("../img/svg/icon-minus.svg");
   }
 
   .footer__toggle--plus {
-    background-image: url("/img/svg/icon-plus.svg");
+    background-image: url("../img/svg/icon-plus.svg");
   }
 
   .footer__toggle:hover {
@@ -2206,17 +2208,17 @@ button,
     width: 100%;
   }
 
-  .footer__block-contacts::after {
+  .footer__block--contacts::after {
     content: "";
     position: absolute;
     bottom: -2px;
     left: -26px;
-    width: calc(100% + 53px);
+    width: calc(100% + 45px);
     height: 1px;
     background-color: rgba(248, 253, 255, 0.7);
   }
 
-  .footer__block-contacts a {
+  .footer__block--contacts a {
     margin-bottom: 10px;
   }
 
@@ -2239,7 +2241,7 @@ button,
     margin-left: 0;
   }
 
-  .accordeon__block--closed {
+  .accordeon .accordeon__block--closed {
     display: none;
   }
 
@@ -2251,40 +2253,40 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("/img/bg-intro-mobile-2x.webp");
+    background-image: url("../img/bg-intro-mobile-2x.webp");
   }
 
   .catalog__item--production {
-    background-image: url("../../img/bg-card-production-mobile-2x.webp");
+    background-image: url("../img/bg-card-production-mobile-2x.webp");
   }
 
   .catalog__item--installation {
-    background-image: url("../../img/bg-card-installation-mobile-2x.webp");
+    background-image: url("../img/bg-card-installation-mobile-2x.webp");
   }
 
   .catalog__item--details {
-    background-image: url("../../img/bg-card-details-mobile-2x.webp");
+    background-image: url("../img/bg-card-details-mobile-2x.webp");
   }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("/img/bg-intro-desktop-2x.webp");
+    background-image: url("../img/bg-intro-desktop-2x.webp");
   }
 
-  .aboutus .container::before {
-    background-image: url("../../img/bg-aboutus-desktop-2x.webp");
+  .aboutus .aboutus__container::before {
+    background-image: url("../img/bg-aboutus-desktop-2x.webp");
   }
 
   .catalog__item--production {
-    background-image: url("../../img/bg-card-production-desktop-2x.webp");
+    background-image: url("../img/bg-card-production-desktop-2x.webp");
   }
 
   .catalog__item--installation {
-    background-image: url("../../img/bg-card-installation-desktop-2x.webp");
+    background-image: url("../img/bg-card-installation-desktop-2x.webp");
   }
 
   .catalog__item--details {
-    background-image: url("../../img/bg-card-details-desktop-2x.webp");
+    background-image: url("../img/bg-card-details-desktop-2x.webp");
   }
 }

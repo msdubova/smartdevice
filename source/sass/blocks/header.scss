@@ -5,21 +5,21 @@
   color: $color-primary-white;
 
   background-color: $color-default-black;
-  background-image: url("/img/bg-intro-desktop-1x.webp");
+  background-image: url("../img/bg-intro-desktop-1x.webp");
   background-size: cover;
 
   @include retina () {
-    background-image: url("/img/bg-intro-desktop-2x.webp");
+    background-image: url("../img/bg-intro-desktop-2x.webp");
   }
 
   @include vp-1023 {
     min-height: 640px;
     margin-bottom: 65px;
 
-    background-image: url("/img/bg-intro-tablet-1x.webp");
+    background-image: url("../img/bg-intro-tablet-1x.webp");
 
     @include retina () {
-      background-image: url("/img/bg-intro-tablet-2x.webp");
+      background-image: url("../img/bg-intro-tablet-2x.webp");
     }
   }
 
@@ -27,10 +27,10 @@
     min-height: 560px;
     margin-bottom: 45px;
 
-    background-image: url("/img/bg-intro-mobile-1x.webp");
+    background-image: url("../img/bg-intro-mobile-1x.webp");
 
     @include retina () {
-      background-image: url("/img/bg-intro-mobile-2x.webp");
+      background-image: url("../img/bg-intro-mobile-2x.webp");
     }
   }
 }
@@ -44,7 +44,7 @@
   background: $black-to-right;
 }
 
-.header__sticker .container {
+.header__sticker .header__container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -64,20 +64,16 @@
   width: 215px;
   height: 55px;
 
-  background-image: url("/img/svg/logo-full.svg");
-
   pointer-events: none;
 
   @include vp-767 {
     width: 35px;
     height: 35px;
     margin-top: 5px;
-
-    background-image: url("/img/svg/logo-mobile.svg");
   }
 }
 
-.header__sticker .button {
+.header__sticker .header__button {
   margin: 5px 0;
 
   @include vp-1023 {
@@ -85,7 +81,7 @@
   }
 }
 
-.header__intro .container {
+.header__intro .header__container {
   padding: 280px  50px 50px 155px;
 
   @include vp-1023 {
@@ -142,7 +138,7 @@
   }
 }
 
-.header__intro .button {
+.header__intro .header__button {
   padding: 17px 27px;
 
   font-size: 18px;

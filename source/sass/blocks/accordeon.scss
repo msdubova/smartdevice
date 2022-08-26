@@ -1,4 +1,4 @@
-.accordeon__block {
+.accordeon .accordeon__block {
   @include vp-767 {
     &--closed {
       display: none;

@@ -26,11 +26,6 @@
     pointer-events: none;
   }
 
-  & * {
-    font-weight: inherit;
-    font-family: inherit;
-  }
-
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {

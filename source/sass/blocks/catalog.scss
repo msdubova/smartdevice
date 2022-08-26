@@ -6,12 +6,8 @@
       flex-direction: column;
     }
 
-    .container {
+    .catalog__container {
       padding: 25px 50px 45px 50px;
-    }
-
-    .catalog {
-      margin-bottom: 39px;
     }
 
     h3 {
@@ -31,15 +27,8 @@
   }
 
   @include vp-767 {
-    .container {
+    .catalog__container {
       padding: 25px 25px 86px 25px;
-    }
-
-    .catalog {
-      margin-bottom: 30px;
-
-      font-size: 28px;
-      line-height: 39px;
     }
 
     h2 {
@@ -64,19 +53,18 @@
     }
   }
 
-  & * {
-    color: $color-secondary-white;
-  }
-
-  .container {
+  .catalog__container {
     padding: 35px 30px 110px 30px;
   }
 
   h2 {
     margin-top: 30px;
+    color: $color-secondary-white;
   }
 
   h3 {
+    color: $color-secondary-white;
+
     margin: 0;
     padding: 0;
 
@@ -133,7 +121,7 @@
       height: 60px;
 
       background-color: $color-primary-blue;
-      background-image: url("../../img/svg/icon-vector.svg");
+      background-image: url("../img/svg/icon-vector.svg");
       background-repeat: no-repeat;
       background-position: center;
 
@@ -186,73 +174,73 @@
   background-size: cover;
 
   &--production {
-    background-image: url("../../img/bg-card-production-desktop-1x.webp");
+    background-image: url("../img/bg-card-production-desktop-1x.webp");
 
     @include retina () {
-      background-image: url("../../img/bg-card-production-desktop-2x.webp");
+      background-image: url("../img/bg-card-production-desktop-2x.webp");
     }
 
     @include vp-1023 {
-      background-image: url("../../img/bg-card-production-tablet-1x.webp");
+      background-image: url("../img/bg-card-production-tablet-1x.webp");
 
       @include retina () {
-        background-image: url("../../img/bg-card-production-tablet-2x.webp");
+        background-image: url("../img/bg-card-production-tablet-2x.webp");
       }
     }
 
     @include vp-767 {
-      background-image: url("../../img/bg-card-production-mobile-1x.webp");
+      background-image: url("../img/bg-card-production-mobile-1x.webp");
 
       @include retina () {
-        background-image: url("../../img/bg-card-production-mobile-2x.webp");
+        background-image: url("../img/bg-card-production-mobile-2x.webp");
       }
     }
   }
 
   &--installation {
-    background-image: url("../../img/bg-card-installation-desktop-1x.webp");
+    background-image: url("../img/bg-card-installation-desktop-1x.webp");
 
     @include retina () {
-      background-image: url("../../img/bg-card-installation-desktop-2x.webp");
+      background-image: url("../img/bg-card-installation-desktop-2x.webp");
     }
 
     @include vp-1023 {
-      background-image: url("../../img/bg-card-installation-tablet-1x.webp");
+      background-image: url("../img/bg-card-installation-tablet-1x.webp");
 
       @include retina () {
-        background-image: url("../../img/bg-card-installation-tablet-2x.webp");
+        background-image: url("../img/bg-card-installation-tablet-2x.webp");
       }
     }
 
     @include vp-767 {
-      background-image: url("../../img/bg-card-installation-mobile-1x.webp");
+      background-image: url("../img/bg-card-installation-mobile-1x.webp");
 
       @include retina () {
-        background-image: url("../../img/bg-card-installation-mobile-2x.webp");
+        background-image: url("../img/bg-card-installation-mobile-2x.webp");
       }
     }
   }
 
   &--details {
-    background-image: url("../../img/bg-card-details-desktop-1x.webp");
+    background-image: url("../img/bg-card-details-desktop-1x.webp");
 
     @include retina () {
-      background-image: url("../../img/bg-card-details-desktop-2x.webp");
+      background-image: url("../img/bg-card-details-desktop-2x.webp");
     }
 
     @include vp-1023 {
-      background-image: url("../../img/bg-card-details-tablet-1x.webp");
+      background-image: url("../img/bg-card-details-tablet-1x.webp");
 
       @include retina () {
-        background-image: url("../../img/bg-card-details-tablet-2x.webp");
+        background-image: url("../img/bg-card-details-tablet-2x.webp");
       }
     }
 
     @include vp-767 {
-      background-image: url("../../img/bg-card-details-mobile-1x.webp");
+      background-image: url("../img/bg-card-details-mobile-1x.webp");
 
       @include retina () {
-        background-image: url("../../img/bg-card-details-mobile-2x.webp");
+        background-image: url("../img/bg-card-details-mobile-2x.webp");
       }
     }
   }

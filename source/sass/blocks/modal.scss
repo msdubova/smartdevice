@@ -63,7 +63,7 @@
     }
   }
 
-  &__button-close {
+  &__button--close {
     position: absolute;
     top: 16px;
     right: 14px;
@@ -132,7 +132,7 @@
     }
   }
 
-  & .button {
+  & .modal__button {
     width: 100%;
     margin-bottom: 8px;
 

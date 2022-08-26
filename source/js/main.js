@@ -54,7 +54,7 @@ function controlModal() {
 
   const modalBlock = document.querySelector('.modal');
   const callButton = document.querySelector('.header__button');
-  const closeButton = modalBlock.querySelector('.modal__button-close');
+  const closeButton = modalBlock.querySelector('.modal__button--close');
   const body = document.querySelector('.page');
   const overlay = document.querySelector('.modal__overlay');
   const nameInput = document.querySelector('#modal-name');
