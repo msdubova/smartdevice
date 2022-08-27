@@ -733,15 +733,14 @@ button,
   margin-bottom: 85px;
   color: #f2f5f6;
   background-color: #041827;
-  background-image: url("../img/bg-intro-desktop-1x.webp");
   background-size: cover;
 }
 
 .header__sticker {
   position: fixed;
-  width: 100%;
   top: 0;
   z-index: 10;
+  width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
@@ -975,11 +974,11 @@ button,
 }
 
 .catalog h3 {
-  color: #ffffff;
   margin: 0;
   padding: 0;
   font-size: 20px;
   line-height: 30px;
+  color: #ffffff;
 }
 
 .catalog ul {
@@ -1052,27 +1051,11 @@ button,
   background-size: cover;
 }
 
-.catalog__item--production {
-  background-image: url("../img/bg-card-production-desktop-1x.webp");
-}
-
-.catalog__item--installation {
-  background-image: url("../img/bg-card-installation-desktop-1x.webp");
-}
-
-.catalog__item--details {
-  background-image: url("../img/bg-card-details-desktop-1x.webp");
-}
-
 .form {
   position: relative;
   min-height: 840px;
   overflow: hidden;
   background: #00b2ff;
-}
-
-.form * {
-  color: #ffffff;
 }
 
 .form::before {
@@ -1089,12 +1072,12 @@ button,
 }
 
 .form label {
+  color: rgba(248, 253, 255, 0.8);
   position: relative;
   display: block;
   padding-left: 20px;
   font-size: 14px;
   line-height: 16px;
-  opacity: 0.8;
 }
 
 .form label::before {
@@ -1109,6 +1092,7 @@ button,
 }
 
 .form textarea {
+  color: #ffffff;
   width: 100%;
   min-height: 155px;
   margin-bottom: 20px;
@@ -1147,6 +1131,7 @@ button,
 }
 
 .form input {
+  color: #ffffff;
   width: 100%;
   padding: 15px;
   background: rgba(4, 20, 39, 0.15);
@@ -1210,6 +1195,7 @@ button,
 }
 
 .form legend {
+  color: #ffffff;
   width: 100%;
   margin: 0;
   margin-bottom: 20px;
@@ -1262,6 +1248,7 @@ button,
 }
 
 .form h2 {
+  color: #ffffff;
   margin-bottom: 12px;
   font-size: 36px;
   line-height: 51px;
@@ -1382,7 +1369,7 @@ button,
 }
 
 .footer a {
-  color: #e5e5e5;
+  color: rgba(248, 253, 255, 0.7);
 }
 
 .footer__nav {
@@ -1620,6 +1607,42 @@ button,
   }
 }
 
+@media (min-width: 1024px) {
+  .header {
+    background-image: url("../img/bg-intro-desktop-1x.png");
+  }
+
+  .catalog__item--production {
+    background-image: url("../img/bg-card-production-desktop-1x.png");
+  }
+
+  .catalog__item--installation {
+    background-image: url("../img/bg-card-installation-desktop-1x.png");
+  }
+
+  .catalog__item--details {
+    background-image: url("../img/bg-card-details-desktop-1x.png");
+  }
+}
+
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
+  .header {
+    background-image: url("../img/bg-intro-desktop-2x.png");
+  }
+
+  .catalog__item--production {
+    background-image: url("../img/bg-card-production-desktop-2x.png");
+  }
+
+  .catalog__item--installation {
+    background-image: url("../img/bg-card-installation-desktop-2x.png");
+  }
+
+  .catalog__item--details {
+    background-image: url("../img/bg-card-details-desktop-2x.png");
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 24px;
@@ -1628,7 +1651,7 @@ button,
   .header {
     min-height: 640px;
     margin-bottom: 65px;
-    background-image: url("../img/bg-intro-tablet-1x.webp");
+    background-image: url("../img/bg-intro-tablet-1x.png");
   }
 
   .header__sticker .header__container {
@@ -1750,15 +1773,15 @@ button,
   }
 
   .catalog__item--production {
-    background-image: url("../img/bg-card-production-tablet-1x.webp");
+    background-image: url("../img/bg-card-production-tablet-1x.png");
   }
 
   .catalog__item--installation {
-    background-image: url("../img/bg-card-installation-tablet-1x.webp");
+    background-image: url("../img/bg-card-installation-tablet-1x.png");
   }
 
   .catalog__item--details {
-    background-image: url("../img/bg-card-details-tablet-1x.webp");
+    background-image: url("../img/bg-card-details-tablet-1x.png");
   }
 
   .form {
@@ -1862,7 +1885,7 @@ button,
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("../img/bg-intro-tablet-2x.webp");
+    background-image: url("../img/bg-intro-tablet-2x.png");
   }
 
   .aboutus .aboutus__container::before {
@@ -1870,15 +1893,15 @@ button,
   }
 
   .catalog__item--production {
-    background-image: url("../img/bg-card-production-tablet-2x.webp");
+    background-image: url("../img/bg-card-production-tablet-2x.png");
   }
 
   .catalog__item--installation {
-    background-image: url("../img/bg-card-installation-tablet-2x.webp");
+    background-image: url("../img/bg-card-installation-tablet-2x.png");
   }
 
   .catalog__item--details {
-    background-image: url("../img/bg-card-details-tablet-2x.webp");
+    background-image: url("../img/bg-card-details-tablet-2x.png");
   }
 }
 
@@ -1904,7 +1927,7 @@ button,
   .header {
     min-height: 560px;
     margin-bottom: 45px;
-    background-image: url("../img/bg-intro-mobile-1x.webp");
+    background-image: url("../img/bg-intro-mobile-1x.png");
   }
 
   .header__sticker .header__container {
@@ -2024,6 +2047,16 @@ button,
     line-height: 30px;
   }
 
+  .catalog ul {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .catalog li {
+    max-width: 350px;
+  }
+
   .catalog li:last-child {
     margin-bottom: 0;
   }
@@ -2052,15 +2085,15 @@ button,
   }
 
   .catalog__item--production {
-    background-image: url("../img/bg-card-production-mobile-1x.webp");
+    background-image: url("../img/bg-card-production-mobile-1x.png");
   }
 
   .catalog__item--installation {
-    background-image: url("../img/bg-card-installation-mobile-1x.webp");
+    background-image: url("../img/bg-card-installation-mobile-1x.png");
   }
 
   .catalog__item--details {
-    background-image: url("../img/bg-card-details-mobile-1x.webp");
+    background-image: url("../img/bg-card-details-mobile-1x.png");
   }
 
   .form .form__button {
@@ -2139,8 +2172,6 @@ button,
   .footer a {
     font-size: 14px;
     line-height: 19px;
-    color: #ffffff;
-    opacity: 0.7;
   }
 
   .footer__nav {
@@ -2253,40 +2284,24 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("../img/bg-intro-mobile-2x.webp");
+    background-image: url("../img/bg-intro-mobile-2x.png");
   }
 
   .catalog__item--production {
-    background-image: url("../img/bg-card-production-mobile-2x.webp");
+    background-image: url("../img/bg-card-production-mobile-2x.png");
   }
 
   .catalog__item--installation {
-    background-image: url("../img/bg-card-installation-mobile-2x.webp");
+    background-image: url("../img/bg-card-installation-mobile-2x.png");
   }
 
   .catalog__item--details {
-    background-image: url("../img/bg-card-details-mobile-2x.webp");
+    background-image: url("../img/bg-card-details-mobile-2x.png");
   }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .header {
-    background-image: url("../img/bg-intro-desktop-2x.webp");
-  }
-
   .aboutus .aboutus__container::before {
     background-image: url("../img/bg-aboutus-desktop-2x.webp");
-  }
-
-  .catalog__item--production {
-    background-image: url("../img/bg-card-production-desktop-2x.webp");
-  }
-
-  .catalog__item--installation {
-    background-image: url("../img/bg-card-installation-desktop-2x.webp");
-  }
-
-  .catalog__item--details {
-    background-image: url("../img/bg-card-details-desktop-2x.webp");
   }
 }

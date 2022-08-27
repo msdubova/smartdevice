@@ -42,7 +42,13 @@
       line-height: 30px;
     }
 
+    ul {
+      align-items: center;
+    }
+
     li {
+      max-width: 350px;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -59,17 +65,17 @@
 
   h2 {
     margin-top: 30px;
+
     color: $color-secondary-white;
   }
 
   h3 {
-    color: $color-secondary-white;
-
     margin: 0;
     padding: 0;
 
     font-size: 20px;
     line-height: 30px;
+    color: $color-secondary-white;
   }
 
   ul {
@@ -136,7 +142,6 @@
 
 .catalog__name {
   display: block;
-
   margin-bottom: 54px;
 
   font-size: 36px;
@@ -174,73 +179,79 @@
   background-size: cover;
 
   &--production {
-    background-image: url("../img/bg-card-production-desktop-1x.webp");
+    @include vp-1024 {
+      background-image: url("../img/bg-card-production-desktop-1x.png");
 
-    @include retina () {
-      background-image: url("../img/bg-card-production-desktop-2x.webp");
+      @include retina () {
+        background-image: url("../img/bg-card-production-desktop-2x.png");
+      }
     }
 
     @include vp-1023 {
-      background-image: url("../img/bg-card-production-tablet-1x.webp");
+      background-image: url("../img/bg-card-production-tablet-1x.png");
 
       @include retina () {
-        background-image: url("../img/bg-card-production-tablet-2x.webp");
+        background-image: url("../img/bg-card-production-tablet-2x.png");
       }
     }
 
     @include vp-767 {
-      background-image: url("../img/bg-card-production-mobile-1x.webp");
+      background-image: url("../img/bg-card-production-mobile-1x.png");
 
       @include retina () {
-        background-image: url("../img/bg-card-production-mobile-2x.webp");
+        background-image: url("../img/bg-card-production-mobile-2x.png");
       }
     }
   }
 
   &--installation {
-    background-image: url("../img/bg-card-installation-desktop-1x.webp");
+    @include vp-1024 {
+      background-image: url("../img/bg-card-installation-desktop-1x.png");
 
-    @include retina () {
-      background-image: url("../img/bg-card-installation-desktop-2x.webp");
+      @include retina () {
+        background-image: url("../img/bg-card-installation-desktop-2x.png");
+      }
     }
 
     @include vp-1023 {
-      background-image: url("../img/bg-card-installation-tablet-1x.webp");
+      background-image: url("../img/bg-card-installation-tablet-1x.png");
 
       @include retina () {
-        background-image: url("../img/bg-card-installation-tablet-2x.webp");
+        background-image: url("../img/bg-card-installation-tablet-2x.png");
       }
     }
 
     @include vp-767 {
-      background-image: url("../img/bg-card-installation-mobile-1x.webp");
+      background-image: url("../img/bg-card-installation-mobile-1x.png");
 
       @include retina () {
-        background-image: url("../img/bg-card-installation-mobile-2x.webp");
+        background-image: url("../img/bg-card-installation-mobile-2x.png");
       }
     }
   }
 
   &--details {
-    background-image: url("../img/bg-card-details-desktop-1x.webp");
+    @include vp-1024 {
+      background-image: url("../img/bg-card-details-desktop-1x.png");
 
-    @include retina () {
-      background-image: url("../img/bg-card-details-desktop-2x.webp");
+      @include retina () {
+        background-image: url("../img/bg-card-details-desktop-2x.png");
+      }
     }
 
     @include vp-1023 {
-      background-image: url("../img/bg-card-details-tablet-1x.webp");
+      background-image: url("../img/bg-card-details-tablet-1x.png");
 
       @include retina () {
-        background-image: url("../img/bg-card-details-tablet-2x.webp");
+        background-image: url("../img/bg-card-details-tablet-2x.png");
       }
     }
 
     @include vp-767 {
-      background-image: url("../img/bg-card-details-mobile-1x.webp");
+      background-image: url("../img/bg-card-details-mobile-1x.png");
 
       @include retina () {
-        background-image: url("../img/bg-card-details-mobile-2x.webp");
+        background-image: url("../img/bg-card-details-mobile-2x.png");
       }
     }
   }
