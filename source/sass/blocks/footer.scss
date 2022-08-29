@@ -1,13 +1,12 @@
 .footer {
   background-color: $color-default-black;
-  flex-shrink: 0;
 
   @include vp-1023 {
     .footer__container {
       flex-direction: column;
       padding: 50px;
       padding-right: 45px;
-      padding-bottom: 55px;
+      padding-bottom: 50px;
     }
   }
 
@@ -25,7 +24,7 @@
   h3 {
     align-items: center;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     font-size: 15px;
     line-height: 16px;
@@ -39,9 +38,17 @@
   }
 
   .footer__container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
     padding: 50px 30px 30px;
+
+    column-gap: 20px;
+
+    grid-template-columns: minmax(250px, 345px) 1fr;
+
+    @include vp-1023 {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
   .footer__socials {
@@ -86,6 +93,8 @@
 }
 
 .footer a {
+  display: block;
+
   color: $color-footer-white;
 
   @include vp-767 {
@@ -96,8 +105,8 @@
 
 .footer__nav {
   display: flex;
-  justify-content: flex-start;
-  width: 70%;
+  justify-content: space-between;
+  width: 100%;
 
   @include vp-1023 {
     width: 100%;
@@ -126,6 +135,7 @@
       position: absolute;
       top: 3px;
       left: -25px;
+
       width: calc(100% + 45px);
       height: 1px;
 
@@ -177,7 +187,7 @@
 }
 
 .footer__block--nav {
-  width: 70%;
+  width: 100%;
 
   @include vp-1023 {
     width: 54%;
@@ -189,32 +199,53 @@
 }
 
 .footer__block--nav ul {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-content: space-between;
-  height: 150px;
+  flex-grow: 1;
   padding: 0;
+
+  column-gap: 20px;
+  column-width: 225px;
 
   @include vp-1023 {
     height: auto;
   }
 }
 
+.footer__block--nav > div {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .footer__block li {
-  width: 48%;
+
+  padding: 3px 0 5px;
 
   @include vp-1023 {
     width: 70%;
+    &:nth-child(5n) {
+      margin-top: 0px;
+    }
   }
 
   @include vp-767 {
     width: 100%;
   }
+
+  &:nth-child(5n) {
+    margin-top: 30px;
+  }
+
 }
 
 .footer__block--contacts {
+  flex-shrink: 0;
+  width: 355px;
+  @include vp-1023 {
+    padding-left: 30px;
+  }
+
   @include vp-767 {
+    padding-left: 0;
     &::after {
       content: "";
       position: absolute;
@@ -229,13 +260,7 @@
   }
 }
 
-.footer__block--nav a {
-  display: block;
-  padding: 3px 0 4px;
-}
-
 .footer__block--contacts a {
-  display: block;
   margin-bottom: 7px;
 
   @include vp-767 {
