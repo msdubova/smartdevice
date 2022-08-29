@@ -1072,6 +1072,7 @@ button,
 }
 
 .form label {
+  cursor: pointer;
   color: rgba(248, 253, 255, 0.8);
   position: relative;
   display: block;
