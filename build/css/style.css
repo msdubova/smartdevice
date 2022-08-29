@@ -728,6 +728,22 @@ button,
   font-weight: 400;
 }
 
+.page__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.page__main {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
 .header {
   min-height: 885px;
   margin-bottom: 85px;
@@ -1049,6 +1065,7 @@ button,
 .catalog__item {
   background-color: #0e354f;
   background-size: cover;
+  background-position: center;
 }
 
 .form {
@@ -1324,6 +1341,8 @@ button,
 
 .footer {
   background-color: #041827;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .footer h3 {
@@ -2052,10 +2071,6 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-  }
-
-  .catalog li {
-    max-width: 350px;
   }
 
   .catalog li:last-child {

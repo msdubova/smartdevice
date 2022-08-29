@@ -47,8 +47,6 @@
     }
 
     li {
-      max-width: 350px;
-
       &:last-child {
         margin-bottom: 0;
       }
@@ -177,6 +175,7 @@
 .catalog__item {
   background-color: $color-bg-catalog-item;
   background-size: cover;
+  background-position: center;
 
   &--production {
     @include vp-1024 {
