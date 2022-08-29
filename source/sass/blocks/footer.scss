@@ -93,7 +93,8 @@
 }
 
 .footer a {
-  display: block;
+ display: inline-block;
+ vertical-align: middle;
 
   color: $color-footer-white;
 
@@ -218,12 +219,12 @@
 
 .footer__block li {
 
-  padding: 3px 0 5px;
+  padding: 3px 0 4px;
 
   @include vp-1023 {
     width: 70%;
-    &:nth-child(5n) {
-      margin-top: 0px;
+    &:last-of-type{
+      margin-bottom: 0;
     }
   }
 
@@ -231,8 +232,8 @@
     width: 100%;
   }
 
-  &:nth-child(5n) {
-    margin-top: 30px;
+  &:last-of-type{
+    margin-bottom: 70px;
   }
 
 }

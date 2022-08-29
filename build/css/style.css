@@ -696,7 +696,6 @@ button,
 .page input:hover,
 .page button:hover {
   outline: 3px solid #f2f5f6;
-  outline-offset: 5px;
   opacity: 0.8;
 }
 
@@ -704,14 +703,12 @@ button,
 .page input:focus,
 .page button:focus {
   outline: 3px solid #f2f5f6;
-  outline-offset: 5px;
 }
 
 .page a:active,
 .page input:active,
 .page button:active {
   outline: 3px solid #f2f5f6;
-  outline-offset: 5px;
 }
 
 .page a:disabled,
@@ -1391,7 +1388,8 @@ button,
 }
 
 .footer a {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   color: rgba(248, 253, 255, 0.7);
 }
 
@@ -1448,11 +1446,11 @@ button,
 }
 
 .footer__block li {
-  padding: 3px 0 5px;
+  padding: 3px 0 4px;
 }
 
-.footer__block li:nth-child(5n) {
-  margin-top: 30px;
+.footer__block li:last-of-type {
+  margin-bottom: 70px;
 }
 
 .footer__block--contacts {
@@ -1921,8 +1919,8 @@ button,
     width: 70%;
   }
 
-  .footer__block li:nth-child(5n) {
-    margin-top: 0px;
+  .footer__block li:last-of-type {
+    margin-bottom: 0;
   }
 
   .footer__block--contacts {

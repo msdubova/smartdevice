@@ -22,7 +22,6 @@
 
   &:hover {
     outline: 3px solid $color-primary-white;
-    outline-offset: 5px;
     opacity: 0.8;
 
     @include vp-767 {
@@ -32,12 +31,10 @@
 
   &:focus {
     outline: 3px solid $color-primary-white;
-    outline-offset: 5px;
   }
 
   &:active {
     outline: 3px solid $color-primary-white;
-    outline-offset: 5px;
   }
 
   &:disabled {
