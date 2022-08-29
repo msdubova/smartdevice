@@ -65,6 +65,7 @@
 }
 
 .header__logo {
+  flex-shrink: 0;
   width: 215px;
   height: 55px;
 
@@ -79,6 +80,7 @@
 
 .header__sticker .header__button {
   margin: 5px 0;
+  flex-shrink: 0;
 
   @include vp-1023 {
     display: none;

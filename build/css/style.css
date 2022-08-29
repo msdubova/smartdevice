@@ -777,6 +777,8 @@ button,
 }
 
 .header__logo {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   width: 215px;
   height: 55px;
   pointer-events: none;
@@ -784,6 +786,8 @@ button,
 
 .header__sticker .header__button {
   margin: 5px 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 
 .header__intro .header__container {
@@ -894,7 +898,6 @@ button,
 }
 
 .advantages li:nth-child(2n) {
-  max-height: 340px;
   margin-right: 0;
 }
 
