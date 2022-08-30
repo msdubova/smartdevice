@@ -93,9 +93,9 @@
 }
 
 .footer a {
- display: inline-block;
- vertical-align: middle;
+  display: inline-block;
 
+  vertical-align: middle;
   color: $color-footer-white;
 
   @include vp-767 {
@@ -218,12 +218,12 @@
 }
 
 .footer__block li {
-
   padding: 3px 0 4px;
 
   @include vp-1023 {
     width: 70%;
-    &:last-of-type{
+
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
@@ -232,21 +232,22 @@
     width: 100%;
   }
 
-  &:last-of-type{
+  &:last-of-type {
     margin-bottom: 70px;
   }
-
 }
 
 .footer__block--contacts {
   flex-shrink: 0;
   width: 355px;
+
   @include vp-1023 {
     padding-left: 30px;
   }
 
   @include vp-767 {
     padding-left: 0;
+
     &::after {
       content: "";
       position: absolute;

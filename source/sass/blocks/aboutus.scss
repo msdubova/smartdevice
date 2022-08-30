@@ -74,22 +74,22 @@
       width: 150px;
       height: 320px;
 
-      background-image: url("../img/bg-aboutus-desktop-1x.webp");
+      background-image: url("../img/bg-aboutus-desktop-1x.png");
       background-repeat: no-repeat;
       background-size: cover;
 
       @include retina () {
-        background-image: url("../img/bg-aboutus-desktop-2x.webp");
+        background-image: url("../img/bg-aboutus-desktop-2x.png");
       }
 
       @include vp-1023 {
         top: 5px;
         left: 45px;
 
-        background-image: url("../img/bg-aboutus-tablet-1x.webp");
+        background-image: url("../img/bg-aboutus-tablet-1x.png");
 
         @include retina () {
-          background-image: url("../img/bg-aboutus-tablet-2x.webp");
+          background-image: url("../img/bg-aboutus-tablet-2x.png");
         }
       }
 

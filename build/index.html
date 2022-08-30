@@ -23,7 +23,7 @@
         <a class="header__logo">
           <picture>
             <source media="(max-width: 767px)" srcset="img/svg/logo-mobile.svg" width="35" height="35">
-            <img src="img/svg/logo-full.svg" width="215" height="55" alt="Интернет-магазин печатных плат Smart-Device">
+            <img src="img/svg/logo-full.svg" width="215" height="55" alt="Интернет-магазин печатных плат Smart-Device" loading="lazy">
           </picture>
         </a>
         <nav class="header__nav nav">
@@ -185,12 +185,13 @@
       <div class="form__container container">
         <div class="form__img">
           <picture>
-            <source type="image/webp" srcset="img/img-form-plane-desktop-2x.webp 2x,
-            img/img-form-plane-desktop-1x.webp 1x">
+            <source type="image/webp"
+                    srcset="img/img-form-plane-desktop-2x.webp 2x,
+                    img/img-form-plane-desktop-1x.webp 1x">
 
             <!-- 1x: 510px; 2x: 1020px -->
-            <img width="510" height="285" srcset="img/img-form-plane-desktop-2x.png 2x"
-              src="img/img-form-plane-desktop-1x.png" alt="Изображение самолета" loading="lazy">
+            <img type="image/png" width="510" height="285" srcset="img/img-form-plane-desktop-2x.png 2x"
+              src="img/img-form-plane-desktop-1x.png" alt="Изображение самолета">
           </picture>
         </div>
 
@@ -213,15 +214,17 @@
                 <label for="tel" class="visually-hidden">Укажите номер телефона в&nbsp;формате</label>
               </p>
               <textarea placeholder="Ваш вопрос"></textarea>
-              <button class="form__button button" type="submit">
-                Задать вопрос
-              </button>
+              <div class="form__wrapper">
               <p class="form__agreement">
                 <input type="checkbox" id="agreement" name="check-agreement" required checked>
                 <label for="agreement">
                   Я&nbsp;согласен на&nbsp;обработку персональных данных
                 </label>
               </p>
+              <button class="form__button button" type="submit">
+                Задать вопрос
+              </button>
+</div>
             </fieldset>
           </form>
         </div>

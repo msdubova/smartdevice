@@ -58,7 +58,7 @@ function controlModal() {
   const body = document.querySelector('.page');
   const overlay = document.querySelector('.modal__overlay');
   const nameInput = document.querySelector('#modal-name');
-
+  const submit = modal.querySelector('.modal__button');
   // Функция отслеживает клавишу ESCape в режиме открытого модально окна, и закроет его в случае нажатия отслеживаемой клавиши
 
   function onEscKeydown(evt) {
@@ -66,6 +66,53 @@ function controlModal() {
       evt.preventDefault();
       closeModal();
     }
+  }
+
+  // Функция, зацикливает фокус внутри модального окна
+
+  function setTabindex() {
+    closeButton.addEventListener('keydown', function (evt) {
+
+      if (evt.key === 'Tab') {
+        evt.preventDefault();
+        nameInput.focus();
+      }
+
+      if (evt.shiftKey && evt.keyCode === 9) {
+        evt.preventDefault();
+        submit.focus();
+      }
+    });
+
+    nameInput.addEventListener('keydown', function (evt) {
+      if (evt.shiftKey && evt.keyCode === 9) {
+        evt.preventDefault();
+        closeButton.focus();
+      }
+    });
+  }
+
+  // Функция, снимает прослушиватели событий для цикла табиндекс с элементов модального окна при закрытии
+  function unsetTabindex() {
+    closeButton.removeEventListener('keydown', function (evt) {
+
+      if (evt.key === 'Tab') {
+        evt.preventDefault();
+        nameInput.focus();
+      }
+
+      if (evt.shiftKey && evt.keyCode === 9) {
+        evt.preventDefault();
+        submit.focus();
+      }
+    });
+
+    nameInput.removeEventListener('keydown', function (evt) {
+      if (evt.shiftKey && evt.keyCode === 9) {
+        evt.preventDefault();
+        closeButton.focus();
+      }
+    });
   }
 
   // Функция закрывает модальное окно
@@ -80,8 +127,10 @@ function controlModal() {
     });
 
     document.removeEventListener('keydown', onEscKeydown);
+
     modalBlock.classList.add('modal--hidden');
     body.classList.remove('scroll-lock');
+    unsetTabindex();
   }
 
   // Функция открывает модальное окно
@@ -99,6 +148,8 @@ function controlModal() {
     });
 
     document.addEventListener('keydown', onEscKeydown);
+
+    setTabindex();
   }
 
   callButton.addEventListener('click', function () {

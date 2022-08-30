@@ -174,8 +174,8 @@
 
 .catalog__item {
   background-color: $color-bg-catalog-item;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 
   &--production {
     @include vp-1024 {

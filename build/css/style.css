@@ -782,9 +782,9 @@ button,
 }
 
 .header__sticker .header__button {
-  margin: 5px 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  margin: 5px 0;
 }
 
 .header__intro .header__container {
@@ -960,7 +960,7 @@ button,
   left: 30px;
   width: 150px;
   height: 320px;
-  background-image: url("../img/bg-aboutus-desktop-1x.webp");
+  background-image: url("../img/bg-aboutus-desktop-1x.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -1064,8 +1064,8 @@ button,
 
 .catalog__item {
   background-color: #0e354f;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
 }
 
 .form {
@@ -1089,6 +1089,9 @@ button,
 }
 
 .form label {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
   cursor: pointer;
   color: rgba(248, 253, 255, 0.8);
   position: relative;
@@ -1125,7 +1128,6 @@ button,
 .form textarea:focus-visible,
 .form textarea:hover {
   outline: auto;
-  outline-offset: 5px;
 }
 
 .form textarea::-webkit-input-placeholder {
@@ -1241,6 +1243,20 @@ button,
   border: none;
 }
 
+.form .form__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
 .form .form__block {
   z-index: 1;
   width: 50%;
@@ -1274,6 +1290,9 @@ button,
 }
 
 .form .form__button {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
   display: inline-block;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
@@ -1642,7 +1661,7 @@ button,
 
 @media (min-width: 1024px) {
   .header {
-    background-image: url("../img/bg-intro-desktop-1x.png");
+    background-image: url("../img/bg-intro-desktop-1x.webp");
   }
 
   .catalog__item--production {
@@ -1660,7 +1679,7 @@ button,
 
 @media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1024px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1024px) and (min-resolution: 144dpi), (min-width: 1024px) and (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("../img/bg-intro-desktop-2x.png");
+    background-image: url("../img/bg-intro-desktop-2x.webp");
   }
 
   .catalog__item--production {
@@ -1684,7 +1703,11 @@ button,
   .header {
     min-height: 640px;
     margin-bottom: 65px;
-    background-image: url("../img/bg-intro-tablet-1x.png");
+    background-image: url("../img/bg-intro-tablet-1x.webp");
+  }
+
+  .header__sticker {
+    position: relative;
   }
 
   .header__sticker .header__container {
@@ -1696,7 +1719,7 @@ button,
   }
 
   .header__intro .header__container {
-    padding: 148px 50px 25px;
+    padding: 50px 50px 25px;
   }
 
   .header__intro h2 {
@@ -1772,7 +1795,7 @@ button,
   .aboutus .aboutus__container::before {
     top: 5px;
     left: 45px;
-    background-image: url("../img/bg-aboutus-tablet-1x.webp");
+    background-image: url("../img/bg-aboutus-tablet-1x.png");
   }
 
   .catalog ul {
@@ -1935,11 +1958,11 @@ button,
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("../img/bg-intro-tablet-2x.png");
+    background-image: url("../img/bg-intro-tablet-2x.webp");
   }
 
   .aboutus .aboutus__container::before {
-    background-image: url("../img/bg-aboutus-tablet-2x.webp");
+    background-image: url("../img/bg-aboutus-tablet-2x.png");
   }
 
   .catalog__item--production {
@@ -1977,7 +2000,7 @@ button,
   .header {
     min-height: 560px;
     margin-bottom: 45px;
-    background-image: url("../img/bg-intro-mobile-1x.png");
+    background-image: url("../img/bg-intro-mobile-1x.webp");
   }
 
   .header__sticker .header__container {
@@ -1991,7 +2014,7 @@ button,
   }
 
   .header__intro .header__container {
-    padding: 120px 25px 25px;
+    padding: 50px 25px 25px;
   }
 
   .header__intro h2 {
@@ -2182,6 +2205,13 @@ button,
     line-height: 42px;
   }
 
+  .form .form__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
   .form__agreement {
     padding-left: 10px;
   }
@@ -2334,7 +2364,7 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .header {
-    background-image: url("../img/bg-intro-mobile-2x.png");
+    background-image: url("../img/bg-intro-mobile-2x.webp");
   }
 
   .catalog__item--production {
@@ -2352,6 +2382,6 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .aboutus .aboutus__container::before {
-    background-image: url("../img/bg-aboutus-desktop-2x.webp");
+    background-image: url("../img/bg-aboutus-desktop-2x.png");
   }
 }
